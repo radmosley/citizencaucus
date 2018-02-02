@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: 'Robot', sans-serif; }
+
+.container {
+  width: 75%;
+  margin: 0 auto; }
+
+.profile-grid {
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto auto;
+  width: 100%; }
+
+.grid-item1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background: grey; }
+
+.sub-menu {
+  border-radius: 0 0 50% 50%;
+  height: 50vh; }
+  .sub-menu ul {
+    list-style: none; }
+    .sub-menu ul li {
+      font-size: 1.5vw;
+      font-weight: 900;
+      color: white;
+      padding: 15px 0;
+      text-decoration: none; }
+
+.grid-item2 {
+  background: white;
+  grid-column-start: 2;
+  grid-column-end: 7; }
+
+.bio-pic img {
+  border-radius: 50%; }
+
+/*# sourceMappingURL=profile.css.map */

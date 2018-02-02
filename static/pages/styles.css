@@ -1,0 +1,28 @@
+body {
+  margin: 0; }
+
+.navbar {
+  background: black;
+  width: 100vw;
+  height: 8vh; }
+
+.container {
+  width: 75%;
+  margin: 0 auto; }
+
+.main-nav {
+  display: inline; }
+  .main-nav img {
+    margin: 0 auto;
+    padding: 10px 0; }
+  .main-nav ul {
+    float: right;
+    display: inline-block; }
+  .main-nav li {
+    display: inline-block;
+    list-style: none;
+    color: white;
+    margin: 0 auto;
+    padding: 0 20px; }
+
+/*# sourceMappingURL=styles.css.map */
