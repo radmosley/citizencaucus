@@ -1,0 +1,27 @@
+.navbar {
+    background: black;
+    width: 100vw;
+    height: 8vh;
+}
+
+.main-nav {
+    display: inline;
+
+    img {
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+
+    ul {
+        float: right;
+        display: inline-block;
+    }
+
+    li {
+        display: inline-block;
+        list-style: none;
+        color: white;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+}
