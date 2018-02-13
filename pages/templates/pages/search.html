@@ -1,0 +1,8 @@
+{% if senators.count > 0  %}
+{% for s in senators %}
+    <li class="auto-complete"><a href="#">{{ s.first_name }} {{ s.last_name }}</a></li>
+{% endfor %}
+{% else %}
+<li>None to show!</li>
+{% endif %}
+
