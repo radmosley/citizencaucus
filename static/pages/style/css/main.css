@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+.container-nav {
+  display: flex;
+  justify-content: space-between;
+  background: red; }
+
+.navbar {
+  background: #253357;
+  width: 100vw;
+  height: 8vh;
+  position: fixed;
+  top: 0; }
+
+.homepage {
+  font-weight: bold;
+  float: left;
+  clear: none;
+  margin: 0;
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+  position: static; }
+  .homepage:hover {
+    color: gold; }
+
+.mp-content {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 2vw;
+  margin: 0 auto; }
+
+.senator-cell {
+  margin-top: 100px;
+  width: 15vw; }
+
+.bio-pic {
+  display: flex;
+  justify-content: center; }
+  .bio-pic button img {
+    margin-top: -50px;
+    margin-left: -20px; }
+
+.title {
+  color: white;
+  z-index: 2;
+  margin: -6vh auto;
+  text-align: center; }
+  .title h2 {
+    font-size: 1.5em;
+    margin: 0; }
+
+.myBtn {
+  border: 3px solid navy;
+  width: 13vw;
+  height: 13vw;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: .5vw; }
+
+.name {
+  background: navy;
+  height: 4vh;
+  margin: 0 auto;
+  width: 75%;
+  z-index: 1;
+  border-radius: 5px;
+  padding: 1vh;
+  display: flex;
+  justify-content: center; }
+  .name h3 {
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    margin: auto; }
+
+/*# sourceMappingURL=main.css.map */

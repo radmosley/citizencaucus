@@ -3,15 +3,18 @@
         <div class="container-nav">
     
     <!--Navigation-->
+    <a href="#" class="homepage">CITIZEN CAUCUS</a>
             <nav class="main-nav">
-                <a href="#" class="homepage">CITIZEN CAUCUS</a>
-                        <div id="">
                             {% csrf_token %}
-                            <p></p>
-                            
-                            <input type="text" id="search" name="search" placeholder="Search for members"/>
+                            <div class="wrap">
+                                <div class="search">
+                                   <input type="text" class="searchTerm" id="search" placeholder="What are you looking for?">
+                                   <button type="submit" class="searchButton">
+                                    <i class="fas fa-search"></i>
+                                  </button>
+                                </div>
+                             </div>
                             <ul id="search-results">
-
                             </ul>
                         </div>
             </nav>                    

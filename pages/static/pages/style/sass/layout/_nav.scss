@@ -1,0 +1,21 @@
+.container-nav {
+    width: 75%;
+    margin: .5vh auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    background: #253357;
+    width: 100vw;
+    height: 7vh;
+    position: fixed;
+    top: 0;
+}
+
+.homepage {
+    margin: 0;
+    position: static;
+}

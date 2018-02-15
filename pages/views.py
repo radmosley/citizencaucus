@@ -18,5 +18,5 @@ def search_titles(request):
         return JsonResponse({"message": "Success", 'html': mark_safe(html)})
     return JsonResponse({"message": "error must be post"})
 
-    # senators = Senator.objects.filter(title_contains=search_text)
-    # return render(request, 'search.html', {'senator':senator})
+def profile(request, first_name, last_name):
+    return render(request, 'pages/profile.html')

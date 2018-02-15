@@ -1,0 +1,53 @@
+
+.bio-pic {
+    display: flex;
+    justify-content: center;
+
+    button {
+
+        img {
+            margin-top: -50px;
+            margin-left: -20px;
+        }
+    }
+}
+
+.title {
+    color: white;
+    z-index: 2;
+    margin: -6vh auto;
+    text-align: center;
+
+    h2 {
+        font-size: 1.5em;
+        margin: 0;
+    }
+}
+
+.myBtn {
+    border: 3px solid $demo_blue;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: .5vw;
+}
+
+.name {
+    background: $demo_blue;
+    height: 4vh;
+    margin: 0 auto;
+    width: 75%;
+    z-index: 1;
+    border-radius: 5px;
+    padding: 1vh;
+    display: flex;
+    justify-content: center;
+
+    h3 {
+        font-size: 1em;
+        color: white;
+        text-align: center;
+        margin: auto;
+    }
+}

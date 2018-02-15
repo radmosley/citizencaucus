@@ -1,0 +1,15 @@
+.container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.mp-content {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 2vw;
+    margin: 0 auto;
+}
+
+.senator-cell {
+    margin-top: 100px;
+}

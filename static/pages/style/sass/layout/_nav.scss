@@ -1,0 +1,27 @@
+.container-nav {
+    display:flex;
+    justify-content: space-between;
+    background: red;
+}
+.navbar {
+    background: #253357;
+    width: 100vw;
+    height: 8vh;
+    position: fixed;
+    top: 0;
+}
+
+.homepage {
+    font-weight: bold;
+    float: left;
+    clear:none;
+    margin: 0;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    position: static;
+
+    &:hover {
+        color: gold;
+    }
+}
