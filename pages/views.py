@@ -61,12 +61,9 @@ def profile(request, member_id):
 
 
 def search_titles(request):
-    if request.method == "POST":
-        search_text = request.POST['search_text']
-
-    else:
-        search_text = ''
-
-    senator_list = Senator.objects.filter(first_name__contains=search_text)
-    context = {'senator_list':senator_list}
-    return render(request, 'pages/search.html', context)
+    if request.method == 'POST':
+        search_text = request.POST.get('search_text', '')
+        senators = Senator.objects.filter(Q(first_name__contains=search_text)|Q(last_name__contains=search_text))
+        html = render_to_string("pages/search.html", {'senators': senators})
+        return JsonResponse({"message": "Success", 'html': mark_safe(html)})
+    return JsonResponse({"message": "error must be post"})
