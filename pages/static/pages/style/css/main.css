@@ -6,6 +6,9 @@ body {
   font: inherit;
   vertical-align: baseline; }
 
+button {
+  padding: 0; }
+
 body, html {
   font-family: 'Roboto', sans-serif; }
 
@@ -54,8 +57,7 @@ body, html {
   display: flex;
   justify-content: center; }
   .bio-pic button img {
-    margin-top: -50px;
-    margin-left: -20px; }
+    width: 125%; }
 
 .title {
   color: white;
@@ -71,8 +73,7 @@ body, html {
   width: 10vw;
   height: 10vw;
   border-radius: 50%;
-  overflow: hidden;
-  padding: .5vw; }
+  overflow: hidden; }
 
 .name {
   background: #253357;

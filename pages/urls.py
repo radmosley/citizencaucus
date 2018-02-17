@@ -1,11 +1,11 @@
 from django.urls import path
-from . import views
+from .views import HomeView, search_titles, profile
 from django.conf import settings
 from django.conf.urls.static import static
 from .models import Senator
 
 urlpatterns = [
-    path('', views.pages, name='index'),
-    path('search/', views.search_titles, name='search'),
-    path('s.last_name' + '-' + 's.first_name' + '/', views.profile, name='profile'),
+    path('', HomeView.as_view(), name='index'),
+    path('search/', search_titles, name='search'),
+    path('<slug:member_id>/', profile, name='profile'),
 ]

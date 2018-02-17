@@ -8,14 +8,16 @@
                             {% csrf_token %}
                             <div class="wrap">
                                 <div class="search">
-                                   <input type="text" class="searchTerm" id="search" placeholder="What are you looking for?">
-                                   <button type="submit" class="searchButton">
-                                    <i class="fas fa-search"></i>
-                                  </button>
-                                </div>
-                             </div>
+                                    <form id="search" action="{% url 'search' %}" method="get" accept-charset="utf-8">
+                                        <button class="searchbutton" type="submit">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                        <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search">
+                                    </form>
                             <ul id="search-results">
+
                             </ul>
+                            </div>
                         </div>
             </nav>                    
         </div>

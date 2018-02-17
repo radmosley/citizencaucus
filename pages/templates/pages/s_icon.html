@@ -1,16 +1,16 @@
 <!-- Trigger/Open The Modal -->
-    <div class="senator-cell">
-        <div class="bio-pic">
-            <button class="myBtn" alt="{{ s.first_name }} {{ s.last_name }}'s Profile'" />
-            <img src="{{ s.bio_pic.url }}" width="200px" height="200px" />
-                <h2 class="title">{{ s.short_title }}</h2>
-            </button>
-        </div>
+<div class="senator-cell">
+    <div class="bio-pic">
+        <a class="myBtn" href="{% url 'profile' s.member_id %}" alt="{{ s.first_name }} {{ s.last_name }}'s Profile'" />
+        <h2 class="title">{{ s.short_title }}</h2>
+        <img src="{{ s.bio_pic.url }}"/>
+    </a>
+    </div>
         <div class="name">
             <h3>{{ s.first_name }} {{ s.last_name }}</h3>
         </div>
-    </div>
+</div>
 <!-- The Modal -->
 <div id="myModal" class="modal">
-    {% include "pages/profile.html" %}
+    {% block sen_profile %}{% endblock %}
 </div>

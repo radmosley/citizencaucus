@@ -5,9 +5,8 @@
 
     button {
 
-        img {
-            margin-top: -50px;
-            margin-left: -20px;
+        img {  
+            width: 125%;
         }
     }
 }
@@ -30,7 +29,6 @@
     height: 10vw;
     border-radius: 50%;
     overflow: hidden;
-    padding: .5vw;
 }
 
 .name {
