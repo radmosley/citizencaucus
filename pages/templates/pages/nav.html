@@ -4,21 +4,15 @@
     
     <!--Navigation-->
     <a href="#" class="homepage">CITIZEN CAUCUS</a>
-            <nav class="main-nav">
-                            {% csrf_token %}
-                            <div class="wrap">
-                                <div class="search">
-                                    <form id="search" action="{% url 'search' %}" method="get" accept-charset="utf-8">
-                                        <button class="searchbutton" type="submit">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                        <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search">
-                                    </form>
+    <form id="search" action="{% url 'search' %}" method="get" accept-charset="utf-8">
+            {% csrf_token %}
+                    <input class="searchTerm" id="searchbox" name="q" type="text" placeholder="Search">
+                    <button class="searchButton" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
                             <ul id="search-results">
 
-                            </ul>
-                            </div>
-                        </div>
-            </nav>                    
+                            </ul>               
         </div>
     </div>

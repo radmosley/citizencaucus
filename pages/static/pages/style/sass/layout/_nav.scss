@@ -1,8 +1,7 @@
 .container-nav {
     width: 75%;
-    margin: .5vh auto;
-    display:flex;
-    flex-direction: row;
+    margin: auto;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -13,9 +12,9 @@
     height: 7vh;
     position: fixed;
     top: 0;
+    display: flex;
 }
 
 .homepage {
     margin: 0;
-    position: static;
 }

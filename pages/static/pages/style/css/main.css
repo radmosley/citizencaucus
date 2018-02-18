@@ -9,11 +9,24 @@ body {
 button {
   padding: 0; }
 
+a {
+  text-decoration: none; }
+
+input {
+  padding: 0; }
+  input [type=button] {
+    border-width: 0;
+    padding: 0;
+    border: 0; }
+  input [type=text] {
+    border-width: 0;
+    padding: 0;
+    border: 0; }
+
 body, html {
   font-family: 'Roboto', sans-serif; }
 
 .homepage {
-  font-weight: 900;
   color: white;
   font-weight: bold;
   text-decoration: none;
@@ -36,9 +49,8 @@ body, html {
 
 .container-nav {
   width: 75%;
-  margin: .5vh auto;
+  margin: auto;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center; }
 
@@ -47,11 +59,11 @@ body, html {
   width: 100vw;
   height: 7vh;
   position: fixed;
-  top: 0; }
+  top: 0;
+  display: flex; }
 
 .homepage {
-  margin: 0;
-  position: static; }
+  margin: 0; }
 
 .bio-pic {
   display: flex;
@@ -135,8 +147,47 @@ body, html {
   text-decoration: none;
   cursor: pointer; }
 
+#search {
+  width: 30vw;
+  display: flex; }
+
+.searchTerm {
+  width: 85%;
+  height: 2.75vh;
+  padding: 5px;
+  border-radius: 5px;
+  color: grey; }
+
+.searchTerm:focus {
+  color: black;
+  border: 1px solid lightblue; }
+
+.searchButton {
+  float: right;
+  width: 10%;
+  height: 4vh;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 20px;
+  text-shadow: 1px 1px 0px #e64747;
+  border: none;
+  background: #a73535;
+  background-image: linear-gradient(bottom, #913333 0%, #a33e3e 100%);
+  border-radius: 5px;
+  box-shadow: inset 0px 1px 0px #df7e7e, 0px 5px 0px 0px #6e0707, 0px 2px 3px #999; }
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  width: 50vh;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%); }
+
 #search-results {
-  background-color: black; }
+  background-color: black;
+  display: none; }
   #search-results li {
     display: block;
     padding: 10px; }
@@ -168,41 +219,5 @@ body, html {
       color: white;
       padding: 15px 0;
       text-decoration: none; }
-
-.search {
-  width: 100%; }
-
-.searchTerm {
-  float: left;
-  width: 100%;
-  border: 3px solid #253357;
-  padding: 5px;
-  height: 20px;
-  border-radius: 5px;
-  outline: none;
-  color: grey; }
-
-.searchTerm:focus {
-  color: black; }
-
-.searchButton {
-  position: absolute;
-  right: -50px;
-  width: 40px;
-  height: 36px;
-  background: lightblue;
-  text-align: center;
-  color: black;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 20px; }
-
-/*Resize the wrap to see the search bar change!*/
-.wrap {
-  width: 30%;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(-50%, -50%); }
 
 /*# sourceMappingURL=main.css.map */
