@@ -10,11 +10,14 @@ class Senator(models.Model):
     state = models.CharField(max_length=5 )
     lst_update = models.DateTimeField(default=datetime.strptime('01/01/2018', '%M/%d/%Y'))
     bio_pic = models.ImageField(null=True)
-    member_id = models.CharField(max_length=20)
+    member_id = models.CharField(max_length=20, blank=True)
+    lng_title = models.CharField(max_length=50, blank=True)
+    party = models.CharField(max_length=50, blank=True)
+    # missed_votes_pct = models.FloatField(blank=True)
+    # votes_with_party_pct = models.FloatField(blank=True)
     # contact_url = models.CharField(max_length=200 blank=True null=True)
     # next_election = models.CharField(max_length=200 blank=True null=True)
     # phone_num = models.CharField(max_length=15 blank=True null=True)
-    # missed_votes_pct = models.CharField(max_length=200 blank=True null=True)
     # party_votes = models.ManytoMany(max_length=200 blank=True null=True)
 
     # def get_vote(self):

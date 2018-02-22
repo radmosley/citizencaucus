@@ -23,6 +23,13 @@ input {
     padding: 0;
     border: 0; }
 
+ul li {
+  list-style: none; }
+
+img {
+  padding: 0;
+  margin: 0; }
+
 body, html {
   font-family: 'Roboto', sans-serif; }
 
@@ -32,7 +39,10 @@ body, html {
   text-decoration: none;
   font-size: 2em; }
   .homepage:hover {
-    color: gold; }
+    color: #ffc000; }
+
+body {
+  background: #fffaec; }
 
 .container {
   width: 75%;
@@ -55,7 +65,7 @@ body, html {
   align-items: center; }
 
 .navbar {
-  background: #253357;
+  background: #135575;
   width: 100vw;
   height: 7vh;
   position: fixed;
@@ -65,87 +75,95 @@ body, html {
 .homepage {
   margin: 0; }
 
+.searchButton {
+  background: #a73535;
+  color: #d8f2ff;
+  box-shadow: inset 0px 1px 0px #df7e7e, 0px 5px 0px 0px #6e0707, 0px 2px 3px #999; }
+
+.bio-pic-outter {
+  border: black; }
+
 .bio-pic {
   display: flex;
   justify-content: center; }
-  .bio-pic button img {
-    width: 125%; }
+  .bio-pic a {
+    width: 80%; }
+    .bio-pic a img {
+      width: 100%; }
 
-.title {
-  color: white;
-  z-index: 2;
-  margin: -6vh auto;
-  text-align: center; }
-  .title h2 {
-    font-size: 1.5em;
-    margin: 0; }
+h3 {
+  font-size: 1em;
+  font-weight: lighter;
+  text-align: center;
+  margin: 1vh 0 .5vh 0; }
+
+h2 {
+  font-size: .9em;
+  text-align: center;
+  margin: 0; }
 
 .myBtn {
-  border: 3px solid #253357;
-  width: 10vw;
   height: 10vw;
   border-radius: 50%;
   overflow: hidden; }
 
 .name {
-  background: #253357;
-  height: 4vh;
   margin: 0 auto;
-  width: 75%;
   z-index: 1;
-  border-radius: 5px;
-  padding: 1vh;
-  display: flex;
-  justify-content: center; }
-  .name h3 {
-    font-size: 1em;
+  padding: 1vh; }
+  .name a {
+    color: black; }
+    .name a:visited {
+      color: black; }
+    .name a:hover {
+      color: grey; }
+
+.profile-header {
+  background: black;
+  display: block;
+  height: 40vh; }
+  .profile-header h2 {
     color: white;
-    text-align: center;
-    margin: auto; }
-
-/* The Modal (background) */
-.modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */ }
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 0 auto;
-  /* 15% from the top and centered */
-  border: 1px solid #888;
-  width: 100%;
-  /* Could be more or less, depending on screen size */ }
+    font-size: 3em; }
+  .profile-header h3 {
+    color: grey;
+    font-size: 3em; }
 
 /* The Close Button */
 .close {
   color: #aaa;
-  float: right;
   font-size: 28px;
   font-weight: bold;
-  display: inline-block; }
+  display: inline-block;
+  float: right;
+  top: 0; }
+  .close a {
+    color: #aaa; }
+    .close a:active {
+      color: #aaa; }
+    .close a:hover, .close a:focus {
+      color: red;
+      text-decoration: none;
+      cursor: pointer; }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer; }
+.profile-pic {
+  display: inline; }
+  .profile-pic img {
+    display: inline; }
+
+.profile-menu {
+  color: white; }
+  .profile-menu ul {
+    background: black;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline;
+    float: right;
+    text-align: right; }
+  .profile-menu li {
+    display: inline;
+    padding: 20px; }
 
 #search {
   width: 30vw;
@@ -156,50 +174,38 @@ body, html {
   height: 2.75vh;
   padding: 5px;
   border-radius: 5px;
-  color: grey; }
+  color: #bebebe;
+  border: 0; }
 
 .searchTerm:focus {
   color: black;
-  border: 1px solid lightblue; }
+  border: 1px solid lightblue;
+  border-radius: 5px; }
 
 .searchButton {
   float: right;
   width: 10%;
   height: 4vh;
-  border-radius: 5px;
   cursor: pointer;
   margin: 0 10px;
   font-size: 20px;
-  text-shadow: 1px 1px 0px #e64747;
   border: none;
   background: #a73535;
-  background-image: linear-gradient(bottom, #913333 0%, #a33e3e 100%);
   border-radius: 5px;
-  box-shadow: inset 0px 1px 0px #df7e7e, 0px 5px 0px 0px #6e0707, 0px 2px 3px #999; }
-
-/*Resize the wrap to see the search bar change!*/
-.wrap {
-  width: 50vh;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(-50%, -50%); }
+  box-shadow: inset 0px 1px 0px #df7e7e, 0px 5px 0px 0px #6e0707, 0px 2px 3px #999;
+  color: #d8f2ff; }
 
 #search-results {
-  background-color: black;
   display: none; }
   #search-results li {
     display: block;
-    padding: 10px; }
+    padding: 1.5vh 0; }
 
-.search-clear {
-  float: right;
-  position: relative;
-  right: 20px;
-  top: 4px; }
-  .search-clear:hover {
-    color: red;
-    cursor: pointer; }
+.search-results {
+  background-color: #bebebe;
+  margin: 4vh 0px;
+  width: 24vw;
+  position: absolute; }
 
 .profile-grid {
   display: inline-grid;
@@ -209,7 +215,7 @@ body, html {
 .sub-menu {
   height: 100%;
   width: 100%;
-  background: grey;
+  background: #bebebe;
   margin: 0; }
   .sub-menu ul {
     list-style: none; }

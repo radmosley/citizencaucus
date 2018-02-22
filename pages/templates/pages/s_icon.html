@@ -1,16 +1,20 @@
 <!-- Trigger/Open The Modal -->
 <div class="senator-cell">
-    <div class="bio-pic">
-        <a class="myBtn" href="{% url 'profile' s.member_id %}" alt="{{ s.first_name }} {{ s.last_name }}'s Profile'" />
-        <h2 class="title">{{ s.short_title }}</h2>
-        <img src="{{ s.bio_pic.url }}"/>
-    </a>
-    </div>
-        <div class="name">
-            <h3>{{ s.first_name }} {{ s.last_name }}</h3>
+    <div class="bio-pic-outter">
+        <div class="bio-pic">
+            <a class="myBtn" href="{% url 'profile' s.member_id %}" alt="{{ s.first_name }} {{ s.last_name }}'s Profile'" />
+            <img src="{{ s.bio_pic.url }}"/>
+        </a>
         </div>
+    </div>
+            <div class="name">
+                <a href="{% url 'profile' s.member_id %}" alt="{{ s.first_name }} {{ s.last_name }}'s Profile'" />
+                    <h3>{{ s.short_title }} {{ s.first_name }} {{ s.last_name }}</h3>
+                    <h2 class="title">{{ s.lng_title }}</h2>
+                </a>
+            </div>
 </div>
 <!-- The Modal -->
-<div id="myModal" class="modal">
+{% comment %} <div id="myModal" class="modal">
     {% block sen_profile %}{% endblock %}
-</div>
+</div> {% endcomment %}

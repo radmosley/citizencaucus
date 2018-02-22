@@ -1,18 +1,18 @@
 <!--Navbar-->
 <div class="navbar">
         <div class="container-nav">
-    
-    <!--Navigation-->
-    <a href="#" class="homepage">CITIZEN CAUCUS</a>
-    <form id="search" action="{% url 'search' %}" method="get" accept-charset="utf-8">
-            {% csrf_token %}
-                    <input class="searchTerm" id="searchbox" name="q" type="text" placeholder="Search">
-                    <button class="searchButton" type="submit">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </form>
-                            <ul id="search-results">
+{% comment %} homepage {% endcomment %}
+        <a href="#" class="homepage">CITIZEN CAUCUS</a>
+{% comment %} search bar {% endcomment %}
+        <form id="search" action="{% url 'search' %}" method="get" accept-charset="utf-8">
+{% csrf_token %}
+            <input class="searchTerm" id="searchbox" name="q" type="text" placeholder="Search"> </br>
+            <button class="searchButton" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+        <ul class="search-results" id="search-results">
 
-                            </ul>               
-        </div>
-    </div>
+        </ul>
+        </form>           
+        </div>  
+</div>
