@@ -90,6 +90,8 @@ body {
     width: 80%; }
     .bio-pic a img {
       width: 100%; }
+    .bio-pic a:hover {
+      opacity: .8s; }
 
 h3 {
   font-size: 1em;
@@ -130,40 +132,60 @@ h2 {
     font-size: 3em; }
 
 /* The Close Button */
-.close {
-  color: #aaa;
-  font-size: 28px;
-  font-weight: bold;
-  display: inline-block;
-  float: right;
-  top: 0; }
-  .close a {
-    color: #aaa; }
-    .close a:active {
+span {
+  float: right; }
+  span .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    display: inline-block;
+    top: 0; }
+    span .close a {
       color: #aaa; }
-    .close a:hover, .close a:focus {
-      color: red;
-      text-decoration: none;
-      cursor: pointer; }
+      span .close a:active {
+        color: #aaa; }
+      span .close a:hover, span .close a:focus {
+        color: red;
+        text-decoration: none;
+        cursor: pointer; }
 
 .profile-pic {
   display: inline; }
   .profile-pic img {
-    display: inline; }
+    display: inline;
+    margin-top: 5vh; }
+
+.heading {
+  display: inline;
+  position: relative;
+  float: right;
+  margin: 6vh 5vw; }
+  .heading h2 {
+    color: white;
+    font-size: 3em; }
+  .heading h3 {
+    color: grey;
+    font-size: 3em; }
 
 .profile-menu {
   color: white; }
   .profile-menu ul {
-    background: black;
     padding: 0;
     margin: 0;
     list-style: none;
     display: inline;
     float: right;
-    text-align: right; }
+    text-align: right;
+    font-size: 1.75em;
+    margin-top: -5px; }
   .profile-menu li {
     display: inline;
     padding: 20px; }
+
+.profile-menu-item a {
+  color: white; }
+  .profile-menu-item a:hover {
+    color: grey; }
 
 #search {
   width: 30vw;

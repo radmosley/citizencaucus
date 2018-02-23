@@ -6,7 +6,7 @@
 {% comment %} search bar {% endcomment %}
         <form id="search" action="{% url 'search' %}" method="get" accept-charset="utf-8">
 {% csrf_token %}
-            <input class="searchTerm" id="searchbox" name="q" type="text" placeholder="Search"> </br>
+            <input class="searchTerm" id="searchbox" name="q" type="text" placeholder="Search" autocomplete="off"> </br>
             <button class="searchButton" type="submit">
                     <i class="fa fa-search"></i>
                 </button>

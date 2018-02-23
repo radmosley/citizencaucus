@@ -12,6 +12,10 @@
         img {  
                 width: 100%;
             }
+
+            &:hover {
+                opacity: .8s;
+            }
     }
     
 }

@@ -1,4 +1,3 @@
-
 //get search input
 $('#search').keyup(function(){
     $.ajax({

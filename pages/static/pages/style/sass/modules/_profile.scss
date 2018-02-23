@@ -38,24 +38,27 @@
 }
 
     /* The Close Button */
-.close {
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    display: inline-block;
+span {
     float: right;
-    top: 0;
-
-    a {
+    
+    .close {
         color: #aaa;
-
-        &:active {
-            color:#aaa;
-        }
-        &:hover, &:focus {
-            color:red;
-            text-decoration: none;
-            cursor: pointer;
+        font-size: 28px;
+        font-weight: bold;
+        display: inline-block;
+        top: 0;
+    
+        a {
+            color: #aaa;
+    
+            &:active {
+                color:#aaa;
+            }
+            &:hover, &:focus {
+                color:red;
+                text-decoration: none;
+                cursor: pointer;
+            }
         }
     }
 }
@@ -65,6 +68,24 @@
 
     img {
         display: inline;
+        margin-top: 5vh;
+    }
+}
+
+.heading {
+    display: inline;
+    position: relative;
+    float: right;
+    margin: 6vh 5vw;
+
+    h2{
+        color: white;
+        font-size: 3em;
+    }
+
+    h3 {
+        color: grey;
+        font-size: 3em;
     }
 }
 
@@ -72,13 +93,14 @@
     color: white;
 
     ul {
-        background: black;
         padding: 0;
         margin: 0;
         list-style: none;
         display: inline;
         float: right;
         text-align: right;
+        font-size: 1.75em;
+        margin-top: -5px;
 
     }
     
@@ -88,3 +110,9 @@
     }
 }
 
+.profile-menu-item a {
+    color: white;
+     &:hover {
+         color: grey;
+     }
+}
