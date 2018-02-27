@@ -20,60 +20,57 @@ class Senator(models.Model):
     # phone_num = models.CharField(max_length=15 blank=True null=True)
     # party_votes = models.ManytoMany(max_length=200 blank=True null=True)
 
+    def __str__(self):
+        return '{} {}'.format(self.short_title, self.last_name)
+    
     # def get_vote(self):
-    #     tz = pytz.timezone('America/Los_Angeles')
-    #     difference = tz.localize(datetime.now()) - self.lst_update
-    #     if difference.total_seconds() > 900:
-    #         print('updating')
-    #         headers = {'X-API-Key': 'pcDFqM1JDUUtsNyhkf4oE40QUpyC1So2ae4kMMaP'}
-    #         v = requests.get('https://api.propublica.org/congress/v1/members/' + self.member_id + '/votes.json', headers=headers)
-    #         print()
-    #         print(v.text)
-    #         print()
-    #         data = v.json()
-    #         for i in data['results']:
-    #             for s in i['votes']:
-    #                 new, created = Vote.objects.get_or_create (
-                
-    #                 bill_id = s['bill']['bill_id'], member=self,
-    #                 defaults = { 
-    #                     'descrip' : s['description'],
-    #                     # 'party' : s['party'],
-    #                     'vote' : s['position']
-    #                 }
-    #                 )
-    #                 if created:
-    #                     print('vote created')
-    #                     continue
-    #                 print('vote updated')
-    #         self.lst_update = datetime.now()
-    #     else: 
+    # tz = pytz.timezone('America/Los_Angeles')
+    # difference = tz.localize(datetime.now()) - self.lst_update
+    # if difference.total_seconds() > 900:
+    #     print('updating')
+    #     headers = {'X-API-Key': 'pcDFqM1JDUUtsNyhkf4oE40QUpyC1So2ae4kMMaP'}
+    #     v = requests.get('https://api.propublica.org/congress/v1/members/' + self.member_id + '/votes.json', headers=headers)
+    #     print()
+    #     print(v.text)
+    #     print()
+    #     data = v.json()
+    #     for i in data['results']:
+    #         for s in i['votes']:
+    #             new, created = Vote.objects.get_or_create (
+    #             bill_id = s['bill']['bill_id'], member_id=self,
+    #             defaults = { 
+    #                 'title' : s['title'],
+    #                 'member_id' : s['member_id'],
+    #                 'bill_id' : s['bill_id'],
+    #                 'vote' : s['position']
+    #                 'results': s['results']
+    #             }
+    #             )
+    #             if created:
+    #                 print('vote created')
+    #                 continue
+    #             print('vote updated')
+    #     self.lst_update = datetime.now()
+    # else: 
     #         print('already updated skipping')
 
     # def __str__(self):
     #     return '{} {}'.format(self.short_title, self.last_name)
 
-# class Vote(models.Model):
-#     descrip  = models.TextField()
-#     bill_id = models.CharField(max_length=50)
-#     member = models.ForeignKey('Senator', on_delete=models.CASCADE, related_name='votes')
-#     # member_title = models.ManyToManyField()
-#     vote = models.CharField(max_length=20)
+
+class Vote(models.Model):
+    title  = models.TextField()
+    member_id = models.ForeignKey(Senator, on_delete=models.CASCADE, related_name="votes")
+    bill_id = models.CharField(max_length=50)
+    # member_title = models.ManyToManyField()
+    vote = models.CharField(max_length=20)
+    results = models.CharField(max_length=20)
+
+    def __str__(self):
+        return '{}'.format(self.title)
 
 # class Party(models.Model):
 #     party = models.CharField(max_length=10)
 #     senators = models.ForeignKey('Senator', related_name='Senator', on_delete=models.SET('Ind'),)
 # #   chair_person = 
-
-# class Member(models.Model):
-#     first_name
-#     last_name
-#     party =
-#     title
-#     twitter
-#     facebook
-#     youtube
-#     session
-
-# class Chamber(models.Model):
 

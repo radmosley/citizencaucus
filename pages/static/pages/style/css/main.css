@@ -42,7 +42,7 @@ body, html {
     color: #ffc000; }
 
 body {
-  background: #fffaec; }
+  background: #f4f8fd; }
 
 .container {
   width: 75%;
@@ -70,15 +70,11 @@ body {
   height: 7vh;
   position: fixed;
   top: 0;
-  display: flex; }
+  display: flex;
+  box-shadow: 1px 0 3px; }
 
 .homepage {
   margin: 0; }
-
-.searchButton {
-  background: #a73535;
-  color: #d8f2ff;
-  box-shadow: inset 0px 1px 0px #df7e7e, 0px 5px 0px 0px #6e0707, 0px 2px 3px #999; }
 
 .bio-pic-outter {
   border: black; }
@@ -97,12 +93,12 @@ h3 {
   font-size: 1em;
   font-weight: lighter;
   text-align: center;
-  margin: 1vh 0 .5vh 0; }
+  margin: 0; }
 
 h2 {
   font-size: .9em;
   text-align: center;
-  margin: 0; }
+  margin: 1vh 0 .5vh 0; }
 
 .myBtn {
   height: 10vw;
@@ -123,7 +119,8 @@ h2 {
 .profile-header {
   background: black;
   display: block;
-  height: 40vh; }
+  height: 40vh;
+  margin-top: 7vh; }
   .profile-header h2 {
     color: white;
     font-size: 3em; }
@@ -132,28 +129,33 @@ h2 {
     font-size: 3em; }
 
 /* The Close Button */
-span {
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  display: inline-block;
+  margin: 2vh 2vh;
   float: right; }
-  span .close {
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    display: inline-block;
-    top: 0; }
-    span .close a {
+  .close a {
+    color: #aaa; }
+    .close a:active {
       color: #aaa; }
-      span .close a:active {
-        color: #aaa; }
-      span .close a:hover, span .close a:focus {
-        color: red;
-        text-decoration: none;
-        cursor: pointer; }
+    .close a:hover, .close a:focus {
+      color: red;
+      text-decoration: none;
+      cursor: pointer; }
 
 .profile-pic {
   display: inline; }
   .profile-pic img {
     display: inline;
     margin-top: 5vh; }
+
+.d {
+  border: 2px solid blue; }
+
+.r {
+  border: 2px solid red; }
 
 .heading {
   display: inline;
@@ -181,11 +183,38 @@ span {
   .profile-menu li {
     display: inline;
     padding: 20px; }
+    .profile-menu li:hover {
+      background: #f4f8fd; }
 
 .profile-menu-item a {
   color: white; }
   .profile-menu-item a:hover {
     color: grey; }
+
+.profile-content {
+  margin-top: 2vh;
+  width: 100%;
+  display: flex; }
+  .profile-content .container {
+    display: flex;
+    justify-content: space-between; }
+
+.contact-info {
+  background: grey;
+  width: 25vw; }
+
+.content-area {
+  width: 48vw; }
+
+.votes {
+  background: grey;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 1.5em;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  border: 1px solid black;
+  border-radius: 5px; }
 
 #search {
   width: 30vw;
@@ -216,6 +245,10 @@ span {
   border-radius: 5px;
   box-shadow: inset 0px 1px 0px #df7e7e, 0px 5px 0px 0px #6e0707, 0px 2px 3px #999;
   color: #d8f2ff; }
+  .searchButton:hover {
+    background: #df7e7e;
+    box-shadow: inset 0px 1px 0px #a73535, 0px 5px 0px 0px #6e0707, 0px 2px 3px #999;
+    color: #135575; }
 
 #search-results {
   display: none; }

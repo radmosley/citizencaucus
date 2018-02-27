@@ -1,44 +1,50 @@
 import os
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 
+os.environ.setdefault('DJANGO_SETTINGS_MODULE',
 
-					  'citizencaucus.settings')
+                      'citizencaucus.settings')
 
 import django
 import requests
 
-#connect to django project
+# connect to django project
 django.setup()
-from pages.models import Senator
+from pages.models import Senator, Vote
 
-#connect to api
-headers = {'X-API-Key': 'pcDFqM1JDUUtsNyhkf4oE40QUpyC1So2ae4kMMaP'}
-v = requests.get('https://api.propublica.org/congress/v1/115/senate/committees/SSAP/subcommittees/SSAP24.json', headers=headers)
+# connect to api
 
-#import data into json format
-data = v.json()
 
-#import json data into database cells
-# for i in data['results']:
-#     for r in i['members']:
-#         new = Senator()
-#         new.first_name = r['first_name']
-#         new.last_name = r['last_name']
-#         new.short_title = r['short_title']
-#         new.party = r['party']
-        # new.contact_url = r['contact_form']
-        # new.next_election = r['next_election']
-        # new.phone_num = r['phone']
-        # new.email = r['email']
-        # new.state = r['state']
-        # new.missed_vote_pct = r['missed_votes_pct']
-        # new.party_votes = r['votes_with_party_pct']
+def get_vote(sen):
+    print('updating')
+    headers = {'X-API-Key': 'pcDFqM1JDUUtsNyhkf4oE40QUpyC1So2ae4kMMaP'}
+    v = requests.get('https://api.propublica.org/congress/v1/members/' +
+                     sen.member_id + '/votes.json', headers=headers)
 
-        # new.save()
+    print()
+    print(v.text)
+    print()
+    # import data into json format
+    data = v.json()
+    for i in data['results']:
+        for s in i['votes']:
+            print(s['bill'])
+            if s['bill']['title'] and s['bill']['bill_id'] and s['position'] and s['result']:
+                new, created = Vote.objects.update_or_create(
+                        bill_id=s['bill']['bill_id'], member_id=sen,
 
-#function to check for existing senators
+                        defaults={
+                        'title': s['bill']['title'],
+                        'bill_id': s['bill']['bill_id'],
+                        'vote': s['position'],
+                        'results': s['result']
+                        }
+                )
+                if created:
+                        print('vote created')
+                        continue
+                else:
+                        print('already updated skipping')
 
-#count members
-# print(r.json(['results'][0]['members']))
 
-print(v.text)
+for i in Senator.objects.all():
+    get_vote(i)

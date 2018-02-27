@@ -31,6 +31,12 @@
     border-radius: 5px;
     box-shadow: inset 0px 1px 0px #df7e7e, 0px 5px 0px 0px #6e0707, 0px 2px 3px #999;
     color: #d8f2ff;
+
+    &:hover {
+        background:#df7e7e;
+        box-shadow: inset 0px 1px 0px #a73535, 0px 5px 0px 0px #6e0707, 0px 2px 3px #999;
+        color:#135575;
+    }
 }
   
 #search-results {

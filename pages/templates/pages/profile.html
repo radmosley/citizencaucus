@@ -9,15 +9,16 @@
     <title>Citizen Caucus</title>
 </head>
 <body>
-    <div class="profile-header">
+{% include "pages/nav.html" %}
+    <div class="profile-header {{ senator.party }}">
         <span class="close"><a href="{% url 'index' %}">x</a></span>
         <div class="container">
          <div class="profile-pic">
              <img src="{{ senator.bio_pic.url }}"/>
          </div>
          <div class="heading">
-             <h2>Lamar Alexander</h2>
-             <h3>Long title</h3>
+             <h2>{{ senator.first_name }} {{ senator.last_name }}</h2>
+             <h3>{{ senator.lng_title }}</h3>
          </div>
          <nav class="profile-menu">
              <ul>
@@ -28,66 +29,32 @@
                  <li class="profile-menu-item"><a href="#">Voting Score</a></li>
              </ul>
          </nav>
+        </div>
     </div>
     <div class="profile-content">
+        <div class="container">
         <div class="contact-info">
-            <ul class="contact-menu">
-                <li class="contact-menu-item"></li>
+            <ul>
+                <li>Website</li>
+                <li>phone number</li>
             </ul>
+        </div>
+        <div class="content-area">
+                <ul class="content-data">
+                    {% include "pages/votes.html" %}
+                    
+                    {% comment %} {% include "pages/orgScore.html" %}
+                    {% include "pages/badges.html" %}
+                    {% include "pages/articles.html" %} {% endcomment %}
+                </ul>
+            </div>
         </div>
     </div>
 
 </div>
 </body>
 </html>
-
-{% comment %} <!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="{% static "pages/style/css/main.css" %}">
-    <title>Citizen Caucus</title>
-</head>
-<body>
-    
-    <!-- Modal content -->
-    <div class="modal-content">
-            <span class="close"><a href="{% url 'index' %}">x</a></span>
-                    <div class="profile-grid">   
-                        <div class="sub-menu grid-item1">
-                            <ul>
-                                <li class="p_sub_menu"><a href="#">bio</a></li>
-                                <li class="p_sub_menu"><a href="#">articles</a></li>
-                                <li class="p_sub_menu"><a href="#">badges</a></li>
-                                <li class="p_sub_menu"><a href="#">voting record</a></li>
-                                <li class="p_sub_menu"><a href="#">voting scores</a></li>
-                            </ul>
-                        </div>
-                    <div class="blog grid-item2">
-                        <div class="profile">
-                        <div class="">
-                                <h1>{{ senator.member_id }}</h1>
-                            <h2>Terms:00</h2> <h2>Party:?</h2> <h2>State:{{ senator.state }}</h2>
-                        </div>
-                        <div class="bio-pic">
-                            <img src="{{ senator.bio_pic.url }}">
-                    
-                            <h1>{{ senator.first_name }} {{ senator.last_name }}</h1>
-                        </div>
-                        <div class="">
-                            <h3>User Score: 100%</h3>
-                            <h3>Organization Score: 100%</h3>
-                            <h3>User Score: 100%</h3>
-                        </div>
-                        </div>
-                        <div class="blog-content">
-    
-                        </div>
-                    </div>
-                </div>
-        </div>
-</body>
-</html> {% endcomment %}
+<script>
+src="http://code.jquery.com/jquery-3.3.1.js"
+integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+crossorigin="anonymous"></script>

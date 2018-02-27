@@ -21,10 +21,15 @@
 //     border: 1px solid #888;
 //     width: 100%; /* Could be more or less, depending on screen size */
 // }
+
+$r: red;
+$d: blue;
+
 .profile-header {
     background: black;
     display: block;
     height: 40vh;
+    margin-top: 7vh;
 
     h2 {
         color: white;
@@ -38,27 +43,24 @@
 }
 
     /* The Close Button */
-span {
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 2vh 2vh;
     float: right;
-    
-    .close {
+
+    a {
         color: #aaa;
-        font-size: 28px;
-        font-weight: bold;
-        display: inline-block;
-        top: 0;
-    
-        a {
-            color: #aaa;
-    
-            &:active {
-                color:#aaa;
-            }
-            &:hover, &:focus {
-                color:red;
-                text-decoration: none;
-                cursor: pointer;
-            }
+
+        &:active {
+            color:#aaa;
+        }
+        &:hover, &:focus {
+            color:red;
+            text-decoration: none;
+            cursor: pointer;
         }
     }
 }
@@ -69,7 +71,16 @@ span {
     img {
         display: inline;
         margin-top: 5vh;
+
     }
+}
+
+.d {
+    border: 2px solid $d;
+}
+
+.r {
+    border: 2px solid $r;
 }
 
 .heading {
@@ -105,8 +116,13 @@ span {
     }
     
     li {
+
         display: inline;
         padding: 20px;
+
+        &:hover {
+            background: #f4f8fd;
+        }
     }
 }
 
@@ -115,4 +131,37 @@ span {
      &:hover {
          color: grey;
      }
+}
+
+.profile-content {
+    margin-top: 2vh;
+    width: 100%;
+    display: flex;
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+    }
+}
+
+.contact-info {
+    background: grey;
+    width: 25vw;
+}
+
+.content-area {
+    width: 48vw;
+
+}
+
+.votes {
+    background: grey;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size: 1.5em;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border: 1px solid black;
+    border-radius: 5px;
 }

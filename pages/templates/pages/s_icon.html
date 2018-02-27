@@ -9,12 +9,8 @@
     </div>
             <div class="name">
                 <a href="{% url 'profile' s.member_id %}" alt="{{ s.first_name }} {{ s.last_name }}'s Profile'" />
-                    <h3>{{ s.short_title }} {{ s.first_name }} {{ s.last_name }}</h3>
                     <h2 class="title">{{ s.lng_title }}</h2>
+                    <h3>{{ s.first_name }} {{ s.last_name }}</h3>
                 </a>
             </div>
 </div>
-<!-- The Modal -->
-{% comment %} <div id="myModal" class="modal">
-    {% block sen_profile %}{% endblock %}
-</div> {% endcomment %}
