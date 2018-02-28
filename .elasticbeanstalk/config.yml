@@ -1,13 +1,9 @@
 branch-defaults:
   master:
-    environment: citizencaucus-dev
+    environment: citizencaucus2-dev
     group_suffix: null
-environment-defaults:
-  citizencaucus-dev:
-    branch: null
-    repository: null
 global:
-  application_name: citizencaucus
+  application_name: citizencaucus2
   branch: null
   default_ec2_keyname: eb
   default_platform: Python 3.6
