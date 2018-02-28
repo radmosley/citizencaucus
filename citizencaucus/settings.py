@@ -130,3 +130,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, '..', 'www', 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+try:
+    from citizencaucus.local_settings immport *
+except ImportError:
+    pass
