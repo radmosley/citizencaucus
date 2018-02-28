@@ -25,18 +25,18 @@ def profile(request, member_id):
 
 def search_titles(request):
     if request.method == 'POST':
-        search_text = request.POST.get('search_text', '').split()
+        search_text = request.POST.get('search_text', 'none').split()
 
         if len(search_text) > 1:
             senators = Senator.objects.filter(
-            Q(first_name__contains=search_text[0]) | Q(last_name__contains=search_text[0]) |
-            Q(first_name__contains=search_text[1]) | Q(last_name__contains=search_text[1])
+            Q(first_name__icontains=search_text[0]) | Q(last_name__icontains=search_text[0]) |
+            Q(first_name__icontains=search_text[1]) | Q(last_name__icontains=search_text[1])
             )
 
         else:
             senators = Senator.objects.filter(
-            Q(first_name__contains=search_text[0]) |
-            Q(last_name__contains=search_text[0])
+            Q(first_name__icontains=search_text[0]) |
+            Q(last_name__icontains=search_text[0])
             )
 
         html = render_to_string("pages/search.html", {'senators': senators})
