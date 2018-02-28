@@ -132,6 +132,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 try:
-    from citizencaucus.local_settings immport *
+    from citizencaucus.local_settings import *
 except ImportError:
     pass
