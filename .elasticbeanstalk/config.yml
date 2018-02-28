@@ -2,6 +2,10 @@ branch-defaults:
   master:
     environment: citizencaucus-dev
     group_suffix: null
+environment-defaults:
+  citizencaucus-dev:
+    branch: null
+    repository: null
 global:
   application_name: citizencaucus
   branch: null
