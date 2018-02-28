@@ -3,7 +3,9 @@
     <div class="bio-pic-outter">
         <div class="bio-pic">
             <a class="myBtn" href="{% url 'profile' s.member_id %}" alt="{{ s.first_name }} {{ s.last_name }}'s Profile'" />
+            {% if s.bio_pic %}
             <img src="{{ s.bio_pic.url }}"/>
+            {% endif %}
         </a>
         </div>
     </div>

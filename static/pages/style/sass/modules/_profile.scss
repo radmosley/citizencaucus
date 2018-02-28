@@ -1,0 +1,167 @@
+// /* The Modal (background) */
+// .modal {
+//     display: none; /* Hidden by default */
+//     position: fixed; /* Stay in place */
+//     z-index: 1; /* Sit on top */
+//     left: 0;
+//     top: 0;
+//     width: 100%; /* Full width */
+//     height: 100%; /* Full height */
+//     overflow: auto; /* Enable scroll if needed */
+//     background-color: rgb(0,0,0); /* Fallback color */
+//     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+// }
+
+
+
+// /* Modal Content/Box */
+// .modal-content {
+//     background-color: #fefefe;
+//     margin: 0 auto; /* 15% from the top and centered */
+//     border: 1px solid #888;
+//     width: 100%; /* Could be more or less, depending on screen size */
+// }
+
+$r: red;
+$d: blue;
+
+.profile-header {
+    background: black;
+    display: block;
+    height: 40vh;
+    margin-top: 7vh;
+
+    h2 {
+        color: white;
+        font-size: 3em;
+    }
+    
+    h3 {
+        color: grey;
+        font-size: 3em;
+    }
+}
+
+    /* The Close Button */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 2vh 2vh;
+    float: right;
+
+    a {
+        color: #aaa;
+
+        &:active {
+            color:#aaa;
+        }
+        &:hover, &:focus {
+            color:red;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}
+
+.profile-pic{
+    display: inline;
+
+    img {
+        display: inline;
+        margin-top: 5vh;
+
+    }
+}
+
+.d {
+    border: 2px solid $d;
+}
+
+.r {
+    border: 2px solid $r;
+}
+
+.heading {
+    display: inline;
+    position: relative;
+    float: right;
+    margin: 6vh 5vw;
+
+    h2{
+        color: white;
+        font-size: 3em;
+    }
+
+    h3 {
+        color: grey;
+        font-size: 3em;
+    }
+}
+
+.profile-menu {
+    color: white;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: inline;
+        float: right;
+        text-align: right;
+        font-size: 1.75em;
+        margin-top: -5px;
+
+    }
+    
+    li {
+
+        display: inline;
+        padding: 20px;
+
+        &:hover {
+            background: #f4f8fd;
+        }
+    }
+}
+
+.profile-menu-item a {
+    color: white;
+     &:hover {
+         color: grey;
+     }
+}
+
+.profile-content {
+    margin-top: 2vh;
+    width: 100%;
+    display: flex;
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+    }
+}
+
+.contact-info {
+    background: grey;
+    width: 25vw;
+}
+
+.content-area {
+    width: 48vw;
+
+}
+
+.votes {
+    background: grey;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size: 1.5em;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border: 1px solid black;
+    border-radius: 5px;
+}

@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime
+from django.utils import timezone
 import requests
 import pytz
 
@@ -8,7 +9,7 @@ class Senator(models.Model):
     last_name = models.CharField(max_length=200)
     short_title = models.CharField(max_length=5)
     state = models.CharField(max_length=5 )
-    lst_update = models.DateTimeField(default=datetime.strptime('01/01/2018', '%M/%d/%Y'))
+    lst_update = models.DateTimeField(default=timezone.now)
     bio_pic = models.ImageField(null=True)
     member_id = models.CharField(max_length=20, blank=True)
     lng_title = models.CharField(max_length=50, blank=True)
@@ -63,8 +64,8 @@ class Vote(models.Model):
     member_id = models.ForeignKey(Senator, on_delete=models.CASCADE, related_name="votes")
     bill_id = models.CharField(max_length=50)
     # member_title = models.ManyToManyField()
-    vote = models.CharField(max_length=20)
-    results = models.CharField(max_length=20)
+    vote = models.CharField(max_length=1000)
+    results = models.CharField(max_length=1000)
 
     def __str__(self):
         return '{}'.format(self.title)

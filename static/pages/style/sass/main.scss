@@ -6,11 +6,13 @@
 
 //Layout//
 @import 'layout/_footer.scss';
-@import 'layout/_header.scss';
 @import 'layout/_typography.scss';
+@import 'layout/_container.scss';
 @import 'layout/_nav.scss';
 
 //Modules//
 @import 'modules/_buttons.scss';
 @import 'modules/_links.scss';
 @import 'modules/_s-icons.scss';
+@import 'modules/_profile.scss';
+@import 'modules/_search-bar.scss';

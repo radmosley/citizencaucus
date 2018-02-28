@@ -1,27 +1,21 @@
 .container-nav {
-    display:flex;
+    width: 75%;
+    margin: auto;
+    display: flex;
     justify-content: space-between;
-    background: red;
+    align-items: center;
 }
+
 .navbar {
-    background: #253357;
+    background: #135575;
     width: 100vw;
-    height: 8vh;
+    height: 7vh;
     position: fixed;
     top: 0;
+    display: flex;
+    box-shadow: 1px 0 3px;
 }
 
 .homepage {
-    font-weight: bold;
-    float: left;
-    clear:none;
     margin: 0;
-    color: white;
-    text-decoration: none;
-    font-size: 2em;
-    position: static;
-
-    &:hover {
-        color: gold;
-    }
 }

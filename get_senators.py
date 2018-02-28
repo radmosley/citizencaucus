@@ -6,6 +6,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE',
 
 import django
 import requests
+from django.utils import timezone
 
 #connect to django project
 django.setup()
@@ -35,8 +36,15 @@ def get_senators():
                 first_name=s['first_name'], last_name=s['last_name'], 
 
                 defaults= { 
-                    'lng_title' : s['title'],
+                    'first_name' : s['first_name'],
+                    'last_name' : s['last_name'],
+                    'short_title' : s['short_title'],
+                    'state' : s['state'],
+                    'lst_update' : timezone.now(),
+                    # 'bio_pic' : s['party'],
+                    'member_id' : s['id'],
                     'party' : s['party'],
+                    'lng_title' : s['title'],
                     # 'missed_votes_pct' : s['missed_votes_pct'],
                     # 'votes_with_party_pct' : s['votes_with_party_pct']
                 }
