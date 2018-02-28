@@ -5,20 +5,9 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-if DEBUG:
-    DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'citizencaucus',
-        'USER': 'ronnie',
-        'PASSWORD': 'password',
-        'HOST': '',
-        'PORT': '',
-    }
-}
-else:
+if 'RDS_DB_NAME' in os.environ:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -29,3 +18,14 @@ else:
             'PORT': os.environ['RDS_PORT'],
         }
     }
+else:
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'citizencaucus',
+        'USER': 'ronnie',
+        'PASSWORD': 'password',
+        'HOST': '',
+        'PORT': '',
+    }
+}
