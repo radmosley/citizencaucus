@@ -20,7 +20,7 @@ $('#search').keyup(function(){
     }
 });
 
-$(document).ready(function(){
+$(document).ready(function(event){
 //open dropdown on search bar focus
     $("#searchbox").focus(function(){
         $('#search-results').show();
@@ -29,7 +29,7 @@ $(document).ready(function(){
 });
 
 //close dropdown on click of window other than the search bar or search results and clear input
-$(window).click(function(){
+$(window).click(function(event){
     if ($("#search > input[type=text]").length > 0){
         $("#searchbox").val('');
         $("#search-results").hide();
