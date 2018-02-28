@@ -58,7 +58,7 @@ ROOT_URLCONF = 'citizencaucus.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'db.sqlite3')],
+        'DIRS': [os.path.join(BASE_DIR, 'pages', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
