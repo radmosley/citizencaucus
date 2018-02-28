@@ -15,7 +15,7 @@ class HomeView(TemplateView):
     def get(self, request):
         senator = Senator.objects.all()
         context = {'senator': senator}
-        return render(request, self.pages, context)
+        return render(request, 'pages/pages.html', context)
 
 def profile(request, member_id):
     senator = Senator.objects.get(member_id=member_id)
