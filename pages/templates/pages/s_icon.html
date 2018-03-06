@@ -1,18 +1,12 @@
 <!-- Trigger/Open The Modal -->
-<div class="senator-cell">
-    <div class="bio-pic-outter">
-        <div class="bio-pic">
-            <a class="myBtn" href="{% url 'profile' s.member_id %}" alt="{{ s.first_name }} {{ s.last_name }}'s Profile'" />
-            {% if s.bio_pic %}
-            <img src="{{ s.bio_pic.url }}"/>
-            {% endif %}
-        </a>
-        </div>
-    </div>
+{% for s in senator %}
+    <a class="myBtn senator-cell" href="{% url 'profile' s.member_id %}" alt="{{ s.first_name }} {{ s.last_name }}'s Profile'" />
+        {% if s.bio_pic %}
+        <img src="{{ s.bio_pic.url }}"/>
+        {% endif %}
             <div class="name">
-                <a href="{% url 'profile' s.member_id %}" alt="{{ s.first_name }} {{ s.last_name }}'s Profile'" />
-                    <h2 class="title">{{ s.lng_title }}</h2>
-                    <h3>{{ s.first_name }} {{ s.last_name }}</h3>
-                </a>
+                <h2 class="title">{{ s.lng_title }}</h2>
+                <h3>{{ s.first_name }} {{ s.last_name }}</h3>
             </div>
-</div>
+    </a>
+{% endfor %}

@@ -1,8 +1,19 @@
-﻿<!DOCTYPE html>
+﻿
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     {% load static %}
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900i" rel="stylesheet"> 
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <link rel="stylesheet" type="text/css" href="{% static "pages/style/css/main.css" %}">
@@ -12,14 +23,15 @@
 <body>
     <!--navbar-->
 {% include "pages/nav.html" %}
-    <div class="container">
-        <div class="mp-content">
+<div class="container">
+        <div class="mp-content" id="home">
     <!--Homepage Image Grid-->
         {% for s in senator %}
             {% include "pages/s_icon.html" %}
         {% endfor %}
         </div>
     </div>
+
     <script
     src="http://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="

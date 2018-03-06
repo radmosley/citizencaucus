@@ -49,13 +49,17 @@ body {
   margin: 0 auto; }
 
 .mp-content {
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-  grid-gap: 2vw;
-  margin: 0 auto; }
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 15vh; }
 
-.senator-cell {
-  margin-top: 100px; }
+.senator-cell img {
+  padding: 0;
+  border-radius: 10px; }
+  .senator-cell img:hover {
+    opacity: .8; }
 
 .container-nav {
   width: 75%;
@@ -76,145 +80,73 @@ body {
 .homepage {
   margin: 0; }
 
-.bio-pic-outter {
-  border: black; }
-
-.bio-pic {
-  display: flex;
-  justify-content: center; }
-  .bio-pic a {
-    width: 80%; }
-    .bio-pic a img {
-      width: 100%; }
-    .bio-pic a:hover {
-      opacity: .8s; }
-
-h3 {
-  font-size: 1em;
-  font-weight: lighter;
-  text-align: center;
-  margin: 0; }
-
-h2 {
-  font-size: .9em;
-  text-align: center;
-  margin: 1vh 0 .5vh 0; }
-
-.myBtn {
-  height: 10vw;
-  border-radius: 50%;
-  overflow: hidden; }
-
-.name {
-  margin: 0 auto;
-  z-index: 1;
-  padding: 1vh; }
-  .name a {
-    color: black; }
-    .name a:visited {
-      color: black; }
-    .name a:hover {
-      color: grey; }
-
-.profile-header {
+.header {
   background: black;
+  height: 45vh;
   display: block;
-  height: 40vh;
-  margin-top: 7vh; }
-  .profile-header h2 {
-    color: white;
-    font-size: 3em; }
-  .profile-header h3 {
-    color: grey;
-    font-size: 3em; }
-
-/* The Close Button */
-.close {
-  color: #aaa;
-  font-size: 28px;
-  font-weight: bold;
-  display: inline-block;
-  margin: 2vh 2vh;
-  float: right; }
-  .close a {
-    color: #aaa; }
-    .close a:active {
-      color: #aaa; }
-    .close a:hover, .close a:focus {
-      color: red;
-      text-decoration: none;
-      cursor: pointer; }
-
-.profile-pic {
-  display: inline; }
-  .profile-pic img {
-    display: inline;
-    margin-top: 5vh; }
-
-.d {
-  border: 2px solid blue; }
-
-.r {
-  border: 2px solid red; }
-
-.heading {
-  display: inline;
-  position: relative;
-  float: right;
-  margin: 6vh 5vw; }
-  .heading h2 {
-    color: white;
-    font-size: 3em; }
-  .heading h3 {
-    color: grey;
-    font-size: 3em; }
-
-.profile-menu {
-  color: white; }
-  .profile-menu ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: inline;
-    float: right;
-    text-align: right;
-    font-size: 1.75em;
-    margin-top: -5px; }
-  .profile-menu li {
-    display: inline;
-    padding: 20px; }
-    .profile-menu li:hover {
-      background: #f4f8fd; }
-
-.profile-menu-item a {
-  color: white; }
-  .profile-menu-item a:hover {
-    color: grey; }
-
-.profile-content {
-  margin-top: 2vh;
-  width: 100%;
-  display: flex; }
-  .profile-content .container {
+  padding-top: 8vh; }
+  .header .container {
     display: flex;
-    justify-content: space-between; }
+    flex-direction: row; }
 
-.contact-info {
+.picture {
+  background: red;
+  width: 50%;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.title {
   background: grey;
-  width: 25vw; }
+  width: 50%;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  .title h2 {
+    font-size: 1.7vh;
+    font-weight: lighter;
+    margin-top: .5vh; }
 
-.content-area {
-  width: 48vw; }
+.sub-nav {
+  width: 100%;
+  height: 10vh;
+  background: purple; }
 
-.votes {
+.header {
+  background: black;
+  height: 45vh;
+  display: block;
+  padding-top: 8vh; }
+  .header .container {
+    display: flex;
+    flex-direction: row; }
+
+.picture {
+  background: red;
+  width: 50%;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.title {
   background: grey;
-  margin-bottom: 10px;
-  padding: 20px;
-  font-size: 1.5em;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  border: 1px solid black;
-  border-radius: 5px; }
+  width: 50%;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  .title h2 {
+    font-size: 1.7vh;
+    font-weight: lighter;
+    margin-top: .5vh; }
+
+.sub-nav {
+  width: 100%;
+  height: 10vh;
+  background: purple; }
 
 #search {
   width: 30vw;

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900i" rel="stylesheet"> 
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static "pages/style/css/main.css" %}">
+    <title>{{ senator.first_name }} {{ senator.last_name }}</title>
+</head>
+<body>
+{% include "pages/nav.html" %}
+    <div class="profile-header {{ senator.party }}">
+        <span class="close"><a href="{% url 'index' %}">x</a></span>
+        <div class="container">
+         <div class="profile-pic">
+             <img src="{{ senator.bio_pic.url }}"/>
+         </div>
+         <div class="heading">
+             <h2>{{ senator.first_name }} {{ senator.last_name }}</h2>
+             <h3>{{ senator.lng_title }}</h3>
+         </div>
+         <nav class="profile-menu">
+             <ul>
+                 <li class="profile-menu-item"><a href="#">Bio</a></li>
+                 <li class="profile-menu-item"><a href="#">Article</a></li>
+                 <li class="profile-menu-item"><a href="#">Badges</a></li>
+                 <li class="profile-menu-item"><a href="#">Voting Record</a></li>
+                 <li class="profile-menu-item"><a href="#">Voting Score</a></li>
+             </ul>
+         </nav>
+        </div>
+    </div>
+    <div class="profile-content">
+        <div class="container">
+        <div class="contact-info">
+            <ul>
+                <li>Website</li>
+                <li>phone number</li>
+            </ul>
+        </div>
+        <div class="content-area">
+                <ul class="content-data">
+                    {% include "pages/votes.html" %}
+                </ul>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+<script>
+src="http://code.jquery.com/jquery-3.3.1.js"
+integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+crossorigin="anonymous"></script>
