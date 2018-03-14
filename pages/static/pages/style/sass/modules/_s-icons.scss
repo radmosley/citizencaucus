@@ -1,108 +1,66 @@
-.header {
-    background:black;
-    height:45vh;
-    display:block;
-    padding-top:8vh;
+.bio-pic-outter {
+    border: black;
+}
 
-    .container {
-        display:flex;
-        flex-direction:row;
+.bio-pic {
+    display: flex;
+    justify-content: center;
+    
+    a {
+        width:80%;
+        border-radius: 5px;
+        
+        img {  
+                width: 100%;
+            }
+
+            &:hover {
+                opacity: .8s;
+            }
     }
+    
 }
 
-.picture {
-    background: red;
-    width: 50%;
-    height: 45vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.title {
-    background: grey;
-    width: 50%;
-    height: 45vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.icon-name {
+    display:flex;
+    flex-flow: column nowrap;
+    color:black;
 
     h2 {
-        font-size: 1.7vh;
+        font-size: 2vh;
         font-weight: lighter;
-        margin-top: .5vh;
+        text-align: center;
+        margin: 0;
+    }
+
+    h3 {
+    font-size: 2.5vh;
+    text-align: center;
+    margin: 0;
     }
 }
 
-.sub-nav {
-    width: 100%;
-    height: 10vh;
-    background: purple;
+.myBtn {
+    overflow: hidden;
+    padding: 0 1.5vw;
+    
 }
 
-// .bio-pic-outter {
-//     border: black;
-// }
+.name {
+    display: flex;
+    flex-flow: column nowrap;
 
-// .bio-pic {
-//     display: flex;
-//     justify-content: center;
+    &:hover {
+        background: #c0c0c0c2;
+        border-radius: 0 0 10px 10px;
     
-//     a {
-//         width:80%;
-//         border-radius: 5px;
-        
-//         img {  
-//                 width: 100%;
-//             }
-
-//             &:hover {
-//                 opacity: .8s;
-//             }
-//     }
+    a {
+        color:black;
     
-// }
+    &:visited {
+        color: black;
+    }
 
-// h3 {
-//     font-size: 1.8vh;
-//     text-align: center;
-//     margin: 0;
-
-// }
-
-// h2 {
-//     font-size: 1.7vh;
-//     font-weight: lighter;
-//     text-align: center;
-//     margin: 0;
-//     margin-top: .5vh;
-// }
-// .myBtn {
-//     overflow: hidden;
-//     padding: 0 1.5vw;
-    
-// }
-
-// .name {
-//     padding: 1vh;
-//     position: relative;
-//     top: -8vh;
-//     background: rgba(0, 0, 0, 0.5);
-//     height: 5.6vh;
-//     border-radius: 0 0 10px 10px;
-//     color:white;
-
-//     &:hover {
-//         background: #c0c0c0c2;
-//         border-radius: 0 0 10px 10px;
-    
-//     a {
-//         color:black;
-    
-//     &:visited {
-//         color: black;
-//     }
-
-//     }
-// }
-// }
+    }
+}
+}

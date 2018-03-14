@@ -18,8 +18,7 @@ body {
 .senator-cell {
 
     img {
-        padding: 0;
-        border-radius: 10px;
+        border: 1px solid black;
 
         &:hover {
             opacity: .8;
