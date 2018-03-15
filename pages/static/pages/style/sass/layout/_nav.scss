@@ -1,21 +1,13 @@
-.container-nav {
-    width: 75%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbar-default {
+    background-color: #135575;
+    border-color: #0f435d;
 }
 
-.navbar {
-    background: #135575;
-    width: 100vw;
-    height: 7vh;
-    position: fixed;
-    top: 0;
-    display: flex;
-    box-shadow: 1px 0 3px;
+.navbar-brand {
+    text-transform: uppercase;
+    font-size: 2.5em;
 }
 
-.homepage {
-    margin: 0;
+.home {
+    color: #fefefe;
 }

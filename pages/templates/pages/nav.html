@@ -1,18 +1,13 @@
-<!--Navbar-->
-<div class="navbar">
-        <div class="container-nav">
-{% comment %} homepage {% endcomment %}
-        <a href="#" class="homepage">CITIZEN CAUCUS</a>
-{% comment %} search bar {% endcomment %}
-        <form id="search" action="{% url 'search' %}" method="get" accept-charset="utf-8">
-{% csrf_token %}
-            <input class="searchTerm" id="searchbox" name="q" type="text" placeholder="Search" autocomplete="off"> </br>
-            <button class="searchButton" type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
-        <ul class="search-results" id="search-results">
-
-        </ul>
-        </form>           
-        </div>  
-</div>
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+                <div class="navbar-header">
+                <a class="navbar-brand home" href="#home">Citizen Caucus</a>
+                </div>
+                <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+        </div><!-- /.container -->
+</nav>

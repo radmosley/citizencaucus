@@ -1,3 +1,8 @@
+/*
+Citizen Caucus
+Author: Ronnie Mosley
+Version: 0.0.1
+*/
 body {
   margin: 0;
   padding: 0;
@@ -30,187 +35,78 @@ img {
   padding: 0;
   margin: 0; }
 
-body, html {
-  font-family: 'Roboto', sans-serif; }
-
-.homepage {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 2em; }
-  .homepage:hover {
-    color: #ffc000; }
-
-body {
-  background: #f4f8fd; }
-
-.container {
-  width: 75%;
-  margin: 0 auto; }
-
 .mp-content {
   display: flex;
   flex-flow: row wrap;
-  align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 15vh; }
 
-.senator-cell img {
-  padding: 0;
-  border-radius: 10px; }
-  .senator-cell img:hover {
-    opacity: .8; }
-
-.container-nav {
-  width: 75%;
-  margin: auto;
+.senator-cell {
+  margin-bottom: 10vh;
+  padding: 0 1.5vw;
   display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  flex-flow: column wrap; }
 
-.navbar {
-  background: #135575;
-  width: 100vw;
-  height: 7vh;
-  position: fixed;
-  top: 0;
+.navbar-default {
+  background-color: #135575;
+  border-color: #0f435d; }
+
+.navbar-brand {
+  text-transform: uppercase;
+  font-size: 2.5em; }
+
+.home {
+  color: #fefefe; }
+
+a {
+  text-decoration: none; }
+
+a.navbar-brand.home {
+  color: #fefefe; }
+  a.navbar-brand.home:hover {
+    color: goldenrod; }
+
+.bio-pic-outter {
+  border: black; }
+
+.bio-pic {
   display: flex;
-  box-shadow: 1px 0 3px; }
-
-.homepage {
-  margin: 0; }
-
-.header {
-  background: black;
-  height: 45vh;
-  display: block;
-  padding-top: 8vh; }
-  .header .container {
-    display: flex;
-    flex-direction: row; }
-
-.picture {
-  background: red;
-  width: 50%;
-  height: 45vh;
-  display: flex;
-  align-items: center;
   justify-content: center; }
+  .bio-pic a {
+    width: 80%;
+    border-radius: 5px; }
+    .bio-pic a img {
+      width: 100%; }
+    .bio-pic a:hover {
+      opacity: .8s; }
 
-.title {
-  background: grey;
-  width: 50%;
-  height: 45vh;
+.icon-name {
   display: flex;
-  justify-content: center;
-  flex-direction: column; }
-  .title h2 {
-    font-size: 1.7vh;
+  flex-flow: column nowrap;
+  color: black; }
+  .icon-name h2 {
+    font-size: 2vh;
     font-weight: lighter;
-    margin-top: .5vh; }
+    text-align: center;
+    margin: 0; }
+  .icon-name h3 {
+    font-size: 2.5vh;
+    text-align: center;
+    margin: 0; }
 
-.sub-nav {
-  width: 100%;
-  height: 10vh;
-  background: purple; }
+.myBtn {
+  overflow: hidden;
+  padding: 0 1.5vw; }
 
-.header {
-  background: black;
-  height: 45vh;
-  display: block;
-  padding-top: 8vh; }
-  .header .container {
-    display: flex;
-    flex-direction: row; }
-
-.picture {
-  background: red;
-  width: 50%;
-  height: 45vh;
+.name {
   display: flex;
-  align-items: center;
-  justify-content: center; }
-
-.title {
-  background: grey;
-  width: 50%;
-  height: 45vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column; }
-  .title h2 {
-    font-size: 1.7vh;
-    font-weight: lighter;
-    margin-top: .5vh; }
-
-.sub-nav {
-  width: 100%;
-  height: 10vh;
-  background: purple; }
-
-#search {
-  width: 30vw;
-  display: flex; }
-
-.searchTerm {
-  width: 85%;
-  height: 2.75vh;
-  padding: 5px;
-  border-radius: 5px;
-  color: #bebebe;
-  border: 0; }
-
-.searchTerm:focus {
-  color: black;
-  border: 1px solid lightblue;
-  border-radius: 5px; }
-
-.searchButton {
-  float: right;
-  width: 10%;
-  height: 4vh;
-  cursor: pointer;
-  margin: 0 10px;
-  font-size: 20px;
-  border: none;
-  background: #a73535;
-  border-radius: 5px;
-  box-shadow: inset 0px 1px 0px #df7e7e, 0px 5px 0px 0px #6e0707, 0px 2px 3px #999;
-  color: #d8f2ff; }
-  .searchButton:hover {
-    background: #df7e7e;
-    box-shadow: inset 0px 1px 0px #a73535, 0px 5px 0px 0px #6e0707, 0px 2px 3px #999;
-    color: #135575; }
-
-#search-results {
-  display: none; }
-  #search-results li {
-    display: block;
-    padding: 1.5vh 0; }
-
-.search-results {
-  background-color: #bebebe;
-  margin: 4vh 0px;
-  width: 24vw;
-  position: absolute; }
-
-.profile-grid {
-  display: inline-grid;
-  grid-template-columns: auto auto auto auto auto;
-  width: 100%; }
-
-.sub-menu {
-  height: 100%;
-  width: 100%;
-  background: #bebebe;
-  margin: 0; }
-  .sub-menu ul {
-    list-style: none; }
-    .sub-menu ul li {
-      font-size: 1.5vw;
-      font-weight: 900;
-      color: white;
-      padding: 15px 0;
-      text-decoration: none; }
+  flex-flow: column nowrap; }
+  .name:hover {
+    background: #c0c0c0c2;
+    border-radius: 0 0 10px 10px; }
+    .name:hover a {
+      color: black; }
+      .name:hover a:visited {
+        color: black; }
 
 /*# sourceMappingURL=main.css.map */

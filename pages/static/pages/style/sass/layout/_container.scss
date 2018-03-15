@@ -1,28 +1,13 @@
-body {
-    background: #f4f8fd;
-}
-
-.container {
-    width: 75%;
-    margin: 0 auto;
-}
-
 .mp-content {
     display: flex;
     flex-flow: row wrap;
-    align-items: flex-start;
-    justify-content: space-around;
-    margin-top:15vh;
+    justify-content: space-between;
+    margin-top: 15vh;
 }
 
 .senator-cell {
-
-    img {
-        padding: 0;
-        border-radius: 10px;
-
-        &:hover {
-            opacity: .8;
-        }
-    }
+    margin-bottom: 10vh;
+    padding: 0 1.5vw;
+    display: flex;
+    flex-flow: column wrap;
 }

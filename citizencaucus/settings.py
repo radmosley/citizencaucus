@@ -35,8 +35,7 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'pages',
-    'dal',
-    'dal_select2',
+    'bootstrap3',
     # 'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
