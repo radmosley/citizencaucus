@@ -41,44 +41,31 @@ img {
   justify-content: space-between;
   margin-top: 15vh; }
 
-<<<<<<< HEAD
 .senator-cell {
   margin-bottom: 10vh;
   padding: 0 1.5vw;
-=======
-.senator-cell img {
-  border: 1px solid black; }
-  .senator-cell img:hover {
-    opacity: .8; }
-
-.container-nav {
-  width: 75%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
-.navbar {
-  background: #135575;
-  width: 100vw;
-  height: 7vh;
-  position: fixed;
-  top: 0;
->>>>>>> dcfff11d77d7a238d285bd8edade248cd3648347
   display: flex;
   flex-flow: column wrap; }
+  .senator-cell img {
+    border: 1px solid black; }
+    .senator-cell img:hover {
+      opacity: .8; }
 
 .navbar-default {
-  background-color: #135575;
-  border-color: #0f435d; }
+  background: linear-gradient(to bottom, #2d4369, #2d5069);
+  border-color: #000d17; }
 
-<<<<<<< HEAD
 .navbar-brand {
   text-transform: uppercase;
-  font-size: 2.5em; }
+  font-size: 2.5em;
+  color: #e4e4e4; }
+  .navbar-brand:hover {
+    color: #ffb000; }
 
-.home {
-  color: #fefefe; }
+.btn-default {
+  color: #e4e4e4;
+  background-color: #970000;
+  border-color: #010051; }
 
 a {
   text-decoration: none; }
@@ -88,17 +75,8 @@ a.navbar-brand.home {
   a.navbar-brand.home:hover {
     color: goldenrod; }
 
-.bio-pic-outter {
-  border: black; }
-
-.bio-pic {
-=======
-a {
-  text-decoration: none; }
-
 a.senator-cell {
-  margin-bottom: 3vw;
-  padding: 0 1vw; }
+  margin: 2vh 1vw; }
 
 .bio-pic-outter {
   border: black; }
@@ -117,15 +95,14 @@ a.senator-cell {
 .icon-name {
   display: flex;
   flex-flow: column nowrap;
-  color: black; }
+  color: black;
+  text-align: center; }
   .icon-name h2 {
     font-size: 2vh;
     font-weight: lighter;
-    text-align: center;
     margin: 0; }
   .icon-name h3 {
     font-size: 2.5vh;
-    text-align: center;
     margin: 0; }
 
 .myBtn {
@@ -155,47 +132,9 @@ a.senator-cell {
 .picture {
   width: 50%;
   height: 45vh;
->>>>>>> dcfff11d77d7a238d285bd8edade248cd3648347
   display: flex;
+  align-items: center;
   justify-content: center; }
-<<<<<<< HEAD
-  .bio-pic a {
-    width: 80%;
-    border-radius: 5px; }
-    .bio-pic a img {
-      width: 100%; }
-    .bio-pic a:hover {
-      opacity: .8s; }
-
-.icon-name {
-  display: flex;
-  flex-flow: column nowrap;
-  color: black; }
-  .icon-name h2 {
-    font-size: 2vh;
-    font-weight: lighter;
-    text-align: center;
-    margin: 0; }
-  .icon-name h3 {
-    font-size: 2.5vh;
-    text-align: center;
-    margin: 0; }
-
-.myBtn {
-  overflow: hidden;
-  padding: 0 1.5vw; }
-
-.name {
-  display: flex;
-  flex-flow: column nowrap; }
-  .name:hover {
-    background: #c0c0c0c2;
-    border-radius: 0 0 10px 10px; }
-    .name:hover a {
-      color: black; }
-      .name:hover a:visited {
-        color: black; }
-=======
   .picture img {
     padding: 0;
     margin: 0;
@@ -240,71 +179,5 @@ a.senator-cell {
   margin: 0;
   width: 50vw;
   background: purple; }
-
-#search {
-  width: 30vw;
-  display: flex; }
-
-.searchTerm {
-  width: 85%;
-  height: 2.75vh;
-  padding: 5px;
-  border-radius: 5px;
-  color: #bebebe;
-  border: 0; }
-
-.searchTerm:focus {
-  color: black;
-  border: 1px solid lightblue;
-  border-radius: 5px; }
-
-.searchButton {
-  float: right;
-  width: 10%;
-  height: 4vh;
-  cursor: pointer;
-  margin: 0 10px;
-  font-size: 20px;
-  border: none;
-  background: #a73535;
-  border-radius: 5px;
-  box-shadow: inset 0px 1px 0px #df7e7e, 0px 5px 0px 0px #6e0707, 0px 2px 3px #999;
-  color: #d8f2ff; }
-  .searchButton:hover {
-    background: #df7e7e;
-    box-shadow: inset 0px 1px 0px #a73535, 0px 5px 0px 0px #6e0707, 0px 2px 3px #999;
-    color: #135575; }
-
-#search-results {
-  display: none; }
-  #search-results li {
-    display: block;
-    padding: 1.5vh 0; }
-
-.search-results {
-  background-color: #bebebe;
-  margin: 4vh 0px;
-  width: 24vw;
-  position: absolute; }
-
-.profile-grid {
-  display: inline-grid;
-  grid-template-columns: auto auto auto auto auto;
-  width: 100%; }
-
-.sub-menu {
-  height: 100%;
-  width: 100%;
-  background: #bebebe;
-  margin: 0; }
-  .sub-menu ul {
-    list-style: none; }
-    .sub-menu ul li {
-      font-size: 1.5vw;
-      font-weight: 900;
-      color: white;
-      padding: 15px 0;
-      text-decoration: none; }
->>>>>>> dcfff11d77d7a238d285bd8edade248cd3648347
 
 /*# sourceMappingURL=main.css.map */
