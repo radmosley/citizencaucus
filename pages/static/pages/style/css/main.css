@@ -1,3 +1,8 @@
+/*
+Citizen Caucus
+Author: Ronnie Mosley
+Version: 0.0.1
+*/
 body {
   margin: 0;
   padding: 0;
@@ -30,27 +35,10 @@ img {
   padding: 0;
   margin: 0; }
 
-body, html {
-  font-family: 'Roboto', sans-serif; }
-
-.homepage {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 2em; }
-  .homepage:hover {
-    color: #ffc000; }
-
-body {
-  background: #f4f8fd; }
-
-.container {
-  width: 75%;
-  margin: 0 auto; }
-
 .mp-content {
   display: flex;
   flex-flow: row wrap;
+<<<<<<< HEAD
   align-items: flex-start;
   justify-content: space-around;
   margin-top: 15vh; }
@@ -80,13 +68,47 @@ body {
     color: white; }
     .navbar .home:hover {
       color: goldenrod; }
+=======
+  justify-content: space-between;
+  margin-top: 15vh; }
+
+.senator-cell {
+  margin-bottom: 10vh;
+  padding: 0 1.5vw;
+  display: flex;
+  flex-flow: column wrap; }
+  .senator-cell img {
+    border: 1px solid black; }
+    .senator-cell img:hover {
+      opacity: .8; }
+
+.navbar-default {
+  background: linear-gradient(to bottom, #2d4369, #2d5069);
+  border-color: #000d17; }
+
+.navbar-brand {
+  text-transform: uppercase;
+  font-size: 2.5em;
+  color: #e4e4e4; }
+  .navbar-brand:hover {
+    color: #ffb000; }
+
+.btn-default {
+  color: #e4e4e4;
+  background-color: #970000;
+  border-color: #010051; }
+>>>>>>> 971141d64360c910f228a0fb63d8c486cbebb5a7
 
 a {
   text-decoration: none; }
 
+a.navbar-brand.home {
+  color: #fefefe; }
+  a.navbar-brand.home:hover {
+    color: goldenrod; }
+
 a.senator-cell {
-  margin-bottom: 3vw;
-  padding: 0 1vw; }
+  margin: 2vh 1vw; }
 
 .bio-pic-outter {
   border: black; }
@@ -105,15 +127,14 @@ a.senator-cell {
 .icon-name {
   display: flex;
   flex-flow: column nowrap;
-  color: black; }
+  color: black;
+  text-align: center; }
   .icon-name h2 {
     font-size: 2vh;
     font-weight: lighter;
-    text-align: center;
     margin: 0; }
   .icon-name h3 {
     font-size: 2.5vh;
-    text-align: center;
     margin: 0; }
 
 .myBtn {
@@ -191,6 +212,7 @@ a.senator-cell {
   width: 50vw;
   background: purple; }
 
+<<<<<<< HEAD
 #search {
   display: flex; }
 
@@ -247,4 +269,6 @@ a.senator-cell {
       padding: 15px 0;
       text-decoration: none; }
 
+=======
+>>>>>>> 971141d64360c910f228a0fb63d8c486cbebb5a7
 /*# sourceMappingURL=main.css.map */

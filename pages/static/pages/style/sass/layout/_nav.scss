@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .navbar {
     background: #135575;
     width: 100vw;
@@ -58,3 +59,25 @@
 // .homepage {
 //     margin: 0;
 // }
+=======
+.navbar-default {
+    background: linear-gradient(to bottom, #2d4369 , #2d5069);
+    border-color: #000d17;
+}
+
+.navbar-brand {
+    text-transform: uppercase;
+    font-size: 2.5em;
+    color:#e4e4e4;
+
+    &:hover{
+        color:#ffb000;
+    }
+}
+
+.btn-default{
+    color:#e4e4e4;
+    background-color:#970000;
+    border-color:#010051;
+}
+>>>>>>> 971141d64360c910f228a0fb63d8c486cbebb5a7

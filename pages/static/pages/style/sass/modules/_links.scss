@@ -2,7 +2,13 @@ a {
     text-decoration: none;
 }
 
+a.navbar-brand.home {
+    color:#fefefe;
+
+    &:hover {
+        color:goldenrod;
+    }
+}
 a.senator-cell {
-    margin-bottom: 3vw;
-    padding: 0 1vw;
+    margin: 2vh 1vw;
 }
