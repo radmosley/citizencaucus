@@ -60,13 +60,6 @@ body {
   .senator-cell img:hover {
     opacity: .8; }
 
-.container-nav {
-  width: 75%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
 .navbar {
   background: #135575;
   width: 100vw;
@@ -75,9 +68,18 @@ body {
   top: 0;
   display: flex;
   box-shadow: 1px 0 3px; }
-
-.homepage {
-  margin: 0; }
+  .navbar .container {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .navbar .home {
+    font-size: 2em;
+    font-weight: bold;
+    color: white; }
+    .navbar .home:hover {
+      color: goldenrod; }
 
 a {
   text-decoration: none; }
@@ -190,16 +192,7 @@ a.senator-cell {
   background: purple; }
 
 #search {
-  width: 30vw;
   display: flex; }
-
-.searchTerm {
-  width: 85%;
-  height: 2.75vh;
-  padding: 5px;
-  border-radius: 5px;
-  color: #bebebe;
-  border: 0; }
 
 .searchTerm:focus {
   color: black;

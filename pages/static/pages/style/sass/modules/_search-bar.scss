@@ -1,16 +1,10 @@
 //search field
 #search {
-    width: 30vw;
     display:flex;
   }
   
   .searchTerm {
-    width: 85%;
-    height: 2.75vh;
-    padding: 5px;
-    border-radius: 5px;
-    color: #bebebe;
-    border: 0;
+
   }
   
   .searchTerm:focus{

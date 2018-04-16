@@ -1,18 +1,16 @@
 <!--Navbar-->
 <div class="navbar">
-        <div class="container-nav">
-{% comment %} homepage {% endcomment %}
-        <a href="#" class="homepage">CITIZEN CAUCUS</a>
-{% comment %} search bar {% endcomment %}
+        <div class="container">
+        <a href="#" class="home">CITIZEN CAUCUS</a>
         <form id="search" action="{% url 'search' %}" method="get" accept-charset="utf-8">
 {% csrf_token %}
-            <input class="searchTerm" id="searchbox" name="q" type="text" placeholder="Search" autocomplete="off"> </br>
-            <button class="searchButton" type="submit">
+                <input class="searchTerm" id="searchbox" name="q" type="text" placeholder="search" autocomplete="off"> </br>
+                <button class="searchButton" type="submit">
                     <i class="fa fa-search"></i>
                 </button>
-        <ul class="search-results" id="search-results">
+                <ul class="search-results" id="search-results">
 
-        </ul>
+                </ul>
         </form>           
         </div>  
 </div>
