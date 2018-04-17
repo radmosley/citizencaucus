@@ -1,8 +1,26 @@
+.navbar > .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 500px){
+        width: 90%;
+        flex-direction: column;
+        margin: 2vh auto;
+    }
+}
+
 .mp-content {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     margin-top: 15vh;
+
+    @media screen and (max-width: 500px){
+        flex-flow: column wrap;
+    }
 }
 
 .senator-cell {
@@ -10,6 +28,11 @@
     padding: 0 1.5vw;
     display: flex;
     flex-flow: column wrap;
+
+    @media screen and (max-width: 500px){
+        flex-flow: column wrap;
+        padding: 0 20vw;
+    }
 
     img {
         border: 1px solid black;

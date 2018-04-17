@@ -36,36 +36,17 @@ img {
   padding: 0;
   margin: 0; }
 
-.navbar > .container {
-  width: 80%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-  @media screen and (max-width: 500px) {
-    .navbar > .container {
-      width: 90%;
-      flex-direction: column;
-      margin: 2vh auto; } }
-
 .mp-content {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   margin-top: 15vh; }
-  @media screen and (max-width: 500px) {
-    .mp-content {
-      flex-flow: column wrap; } }
 
 .senator-cell {
   margin-bottom: 10vh;
   padding: 0 1.5vw;
   display: flex;
   flex-flow: column wrap; }
-  @media screen and (max-width: 500px) {
-    .senator-cell {
-      flex-flow: column wrap;
-      padding: 0 20vw; } }
   .senator-cell img {
     border: 1px solid black; }
     .senator-cell img:hover {
@@ -74,18 +55,23 @@ img {
 .navbar {
   background: #135575;
   width: 100vw;
-  height: 15vh;
+  height: 7vh;
   position: fixed;
   top: 0;
   display: flex;
   box-shadow: 1px 0 3px; }
-
-.home {
-  font-size: 2em;
-  font-weight: bold;
-  color: white; }
-  .home:hover {
-    color: goldenrod; }
+  .navbar .container {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .navbar .home {
+    font-size: 2em;
+    font-weight: bold;
+    color: white; }
+    .navbar .home:hover {
+      color: goldenrod; }
 
 a {
   text-decoration: none; }
@@ -202,6 +188,28 @@ a.senator-cell {
 
 #search {
   display: flex; }
+
+.searchTerm:focus {
+  color: black;
+  border: 1px solid lightblue;
+  border-radius: 5px; }
+
+.searchButton {
+  float: right;
+  width: 10%;
+  height: 4vh;
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 20px;
+  border: none;
+  background: #a73535;
+  border-radius: 5px;
+  box-shadow: inset 0px 1px 0px #df7e7e, 0px 5px 0px 0px #6e0707, 0px 2px 3px #999;
+  color: #d8f2ff; }
+  .searchButton:hover {
+    background: #df7e7e;
+    box-shadow: inset 0px 1px 0px #a73535, 0px 5px 0px 0px #6e0707, 0px 2px 3px #999;
+    color: #135575; }
 
 #search-results {
   display: none; }
