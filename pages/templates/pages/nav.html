@@ -1,9 +1,9 @@
 <!--Navbar-->
 <div class="navbar">
         <div class="container">
+                {% csrf_token %}
         <a href="#" class="home">CITIZEN CAUCUS</a>
         <form id="search" action="{% url 'search' %}" method="get" accept-charset="utf-8">
-{% csrf_token %}
                 <input class="searchTerm" id="searchbox" name="q" type="text" placeholder="search" autocomplete="off"> </br>
                 <button class="searchButton" type="submit">
                     <i class="fa fa-search"></i>

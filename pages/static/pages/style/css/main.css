@@ -203,11 +203,9 @@ a.senator-cell {
 #search {
   display: flex; }
 
-#search-results {
-  display: none; }
-  #search-results li {
-    display: block;
-    padding: 1.5vh 0; }
+#search-results li {
+  display: block;
+  padding: 1.5vh 0; }
 
 .search-results {
   background-color: #bebebe;
