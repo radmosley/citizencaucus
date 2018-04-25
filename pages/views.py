@@ -24,10 +24,10 @@ def profile(request, member_id):
     return render(request, 'pages/profile.html', context)
 
 def search_titles(request):
-    if request.is_ajax():
+    if request.method == 'POST':
         search_text = request.POST.get('search_text', 'none').split()
 
-        if len(search_text) > 2:
+        if len(search_text) > 1:
             senators = Senator.objects.filter(
             Q(first_name__icontains=search_text[0]) | Q(last_name__icontains=search_text[0]) |
             Q(first_name__icontains=search_text[1]) | Q(last_name__icontains=search_text[1])
