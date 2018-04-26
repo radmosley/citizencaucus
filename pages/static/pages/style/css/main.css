@@ -19,7 +19,9 @@ a {
   text-decoration: none; }
 
 input {
-  padding: 0; }
+  padding: .5vh;
+  width: 15vw;
+  border: 0; }
   input [type=button] {
     border-width: 0;
     padding: 0;
