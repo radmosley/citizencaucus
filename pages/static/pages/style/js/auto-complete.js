@@ -20,15 +20,11 @@ $('#search').keyup(function(){
     }
 });
 
-$(document).ready(function(event){
-    //open dropdown on search bar focus
-        $("#search").focus(function(){
-            $("#search-results").css("display", "block");
-        })
-        
-        //close dropdown on click of window other than the search bar or search results and clear input
-        $("#search").blur(function(){
-                $("#search-results").reset();
-        });
-    });
-    
+$('#search').click(function(event){
+    event.stopPropagation();
+    $('#search-results').show();
+});
+
+$(document).click(function(){
+    $('#search-results').hide();
+});
