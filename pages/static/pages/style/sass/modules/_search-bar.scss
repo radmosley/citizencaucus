@@ -1,6 +1,6 @@
 //search field
 #search {
-    display:flex;
+    height: 100%;
   }
   
   .searchTerm {
@@ -20,10 +20,19 @@
     }
 
 .search-results {
-    background-color: #bebebe;
-    margin: 4vh 0px;
-    width: 24vw;
+    background-color: white;
+    margin: 0px;
+    width: 15vw;
     position: absolute;
+    padding: .5vh;
+    box-shadow: 0 1px 1px 1px #888888
+}
+
+.auto-complete {
+
+    a {
+        font-size: .75em;
+    }
 }
 
 .profile-grid {

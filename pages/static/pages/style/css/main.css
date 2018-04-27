@@ -52,16 +52,18 @@ img {
 
 .mp-content {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 15vh; }
   @media screen and (max-width: 500px) {
     .mp-content {
       flex-flow: column wrap; } }
+  .mp-content .container {
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
 
 .senator-cell {
-  margin-bottom: 10vh;
-  padding: 0 1.5vw;
   display: flex;
   flex-flow: column wrap; }
   @media screen and (max-width: 500px) {
@@ -76,7 +78,6 @@ img {
 .navbar {
   background: #135575;
   width: 100vw;
-  height: 15vh;
   position: fixed;
   top: 0;
   display: flex;
@@ -203,17 +204,22 @@ a.senator-cell {
   background: purple; }
 
 #search {
-  display: flex; }
+  height: 100%; }
 
 #search-results li {
   display: block;
   padding: 1.5vh 0; }
 
 .search-results {
-  background-color: #bebebe;
-  margin: 4vh 0px;
-  width: 24vw;
-  position: absolute; }
+  background-color: white;
+  margin: 0px;
+  width: 15vw;
+  position: absolute;
+  padding: .5vh;
+  box-shadow: 0 1px 1px 1px #888888; }
+
+.auto-complete a {
+  font-size: .75em; }
 
 .profile-grid {
   display: inline-grid;

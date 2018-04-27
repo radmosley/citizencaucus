@@ -1,14 +1,14 @@
 <!--Navbar-->
 <div class="navbar">
+        {% csrf_token %}
         <div class="container">
-                {% csrf_token %}
-        <a href="#" class="home">CITIZEN CAUCUS</a>
-        <form id="search" action="{% url 'search' %}" method="get" accept-charset="utf-8">
-                <input class="searchTerm" id="searchbox" name="q" type="text" placeholder="search" autocomplete="off"> </br>
-                <ul class="search-results" id="search-results">
+                <a href="#" class="home">CITIZEN CAUCUS</a>
+                <form id="search" action="{% url 'search' %}" method="get" accept-charset="utf-8">
+                        <input class="searchTerm" id="searchbox" name="q" type="text" placeholder="search" autocomplete="off"> </br>
+                        <ul class="search-results" id="search-results">
 
-                </ul>
-        </form>           
+                        </ul>
+                </form>           
         </div>  
 </div>
 

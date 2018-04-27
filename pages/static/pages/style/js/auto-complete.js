@@ -15,8 +15,6 @@ $('#search').keyup(function(){
                 console.log('error on ajax.')
             }
         });
-
-
     }
 });
 
