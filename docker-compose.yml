@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  django:
+    container_name: django_server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: citizen_caucus
+    stdin_open: true
+    volumes:
+      - .:/var/www/citizencaucus
+    ports:
+      - "8000:8000"
