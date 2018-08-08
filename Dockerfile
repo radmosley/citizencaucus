@@ -1,13 +1,17 @@
 # Citizen Caucus
 # Version 1.0
 
-FROM python:3.4
+FROM python:3.6
 
 # Install Python and packages
+ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-RUN mkdir /web
-WORKDIR /web
-ADD . /web/requirements.txt /web/
-RUN  pip install -r /web/requirements.txt
-ADD . /web/
+# Install dependencies
+RUN pip install --upgrade pip
+RUN pip install pipenv
+COPY ./Pipfile /citizencaucus/Pipfile
+RUN pip install --user pipenv
+
+# Copy project
+COPY . /citizencaucus/
