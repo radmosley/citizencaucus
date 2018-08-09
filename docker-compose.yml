@@ -1,18 +1,14 @@
-version: "3.2"
+version: '3'
 
 services:
+  db:
+    image: postgres
   web:
-    image: nginx:latest
+    build: .
+    command: python manage.py runserver 0.0.0.0:5432
+    volumes:
+      - .:/code/citizencaucus
     ports:
-      - "9602:80"
-    volumes:
-      - ./confs/nginx.conf:/etc/nginx.conf:ro
-      - ./confs/conf.d:/etc/nginx/conf.d
-      - ./proxy_params:/etc/nginc/proxy_params:ro
-  backend:
-    image: pinyos/kencleng:latest
-    command: /usr/local/bin/gunicorn -- access-logfile - --workers 3 --bind 0.0.0.0:8000 kencleng.wsgi:application
-    volumes:
-      - ./app:/var/www/kencleng
-      ports:
-      - "9599:8000"
+      - "5432:5432"
+    depends_on:
+      - db
