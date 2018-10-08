@@ -1,0 +1,7 @@
+{% for v in votes %}
+<div class="votes">
+    <span class="billId">{{ v.bill_id}}</span>
+    <span class="position">{{ v.results}}</span>
+    <span class="sen-vote">{{ v.vote}}</span>
+</div>
+{% endfor %}

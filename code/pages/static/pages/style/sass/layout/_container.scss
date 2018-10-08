@@ -1,0 +1,48 @@
+.navbar > .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 500px){
+        width: 90%;
+        flex-direction: column;
+        margin: 2vh auto;
+    }
+}
+
+.mp-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 15vh;
+
+    @media screen and (max-width: 500px){
+        flex-flow: column wrap;
+    }
+
+    .container {
+        width: 80%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+}
+
+.senator-cell {
+    display: flex;
+    flex-flow: column wrap;
+
+    @media screen and (max-width: 500px){
+        flex-flow: column wrap;
+        padding: 0 20vw;
+    }
+
+    img {
+        border: 1px solid black;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
