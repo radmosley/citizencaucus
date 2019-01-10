@@ -43,8 +43,8 @@ def get_senators():
                     'lst_update' : timezone.now(),
                     # 'bio_pic' : s['party'],
                     'member_id' : s['id'],
-                    'party' : s['party'],
                     'lng_title' : s['title'],
+                    'party' : s['party'],
                     # 'missed_votes_pct' : s['missed_votes_pct'],
                     # 'votes_with_party_pct' : s['votes_with_party_pct']
                 }
