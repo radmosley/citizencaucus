@@ -1,0 +1,1 @@
+cmd_/code/node-v11.6.0/out/Release/obj.target/tools/icu/libicudata.a := rm -f /code/node-v11.6.0/out/Release/obj.target/tools/icu/libicudata.a && ar crsT /code/node-v11.6.0/out/Release/obj.target/tools/icu/libicudata.a /code/node-v11.6.0/out/Release/obj.target/icudata/gen/icusmdt63_dat.o

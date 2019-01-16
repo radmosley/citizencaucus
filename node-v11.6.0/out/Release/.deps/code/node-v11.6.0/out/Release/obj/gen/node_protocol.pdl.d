@@ -1,0 +1,1 @@
+cmd_/code/node-v11.6.0/out/Release/obj/gen/node_protocol.pdl := ln -f "../src/inspector/node_protocol.pdl" "/code/node-v11.6.0/out/Release/obj/gen/node_protocol.pdl" 2>/dev/null || (rm -rf "/code/node-v11.6.0/out/Release/obj/gen/node_protocol.pdl" && cp -af "../src/inspector/node_protocol.pdl" "/code/node-v11.6.0/out/Release/obj/gen/node_protocol.pdl")

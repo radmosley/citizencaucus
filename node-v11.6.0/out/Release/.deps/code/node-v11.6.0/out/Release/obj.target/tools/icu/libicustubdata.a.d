@@ -1,0 +1,1 @@
+cmd_/code/node-v11.6.0/out/Release/obj.target/tools/icu/libicustubdata.a := rm -f /code/node-v11.6.0/out/Release/obj.target/tools/icu/libicustubdata.a && ar crsT /code/node-v11.6.0/out/Release/obj.target/tools/icu/libicustubdata.a /code/node-v11.6.0/out/Release/obj.target/icustubdata/deps/icu-small/source/stubdata/stubdata.o

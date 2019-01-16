@@ -1,0 +1,13 @@
+
+*test*message*nexttick_throw.js:*
+        undefined_reference_error_maker;
+        ^
+ReferenceError: undefined_reference_error_maker is not defined
+    at *test*message*nexttick_throw.js:*:*
+    at internalTickCallback (internal/process/next_tick.js:*:*)
+    at process._tickCallback (internal/process/next_tick.js:*:*)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:*:*)
+    at executeUserCode (internal/bootstrap/node.js:*:*)
+    at startExecution (internal/bootstrap/node.js:*:*)
+    at startup (internal/bootstrap/node.js:*:*)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:*:*)
