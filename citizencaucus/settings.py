@@ -35,7 +35,7 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'pages',
-    # 'grappelli',
+    # 'livereload',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -52,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'livereload.middleware.LiveReloadScript',
 ]
 
 ROOT_URLCONF = 'citizencaucus.urls'
@@ -130,6 +131,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, '..', 'www', 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
 
 try:
     from citizencaucus.local_settings import *
