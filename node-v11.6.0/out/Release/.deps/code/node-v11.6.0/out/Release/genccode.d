@@ -1,1 +1,0 @@
-cmd_/code/node-v11.6.0/out/Release/genccode := g++ -o /code/node-v11.6.0/out/Release/genccode -pthread -rdynamic -m64  -Wl,--start-group /code/node-v11.6.0/out/Release/obj.host/genccode/deps/icu-small/source/tools/genccode/genccode.o /code/node-v11.6.0/out/Release/obj.host/genccode/tools/icu/no-op.o /code/node-v11.6.0/out/Release/obj.host/tools/icu/libicutools.a  -Wl,--end-group
