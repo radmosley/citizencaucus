@@ -1,1 +1,0 @@
-cmd_/code/node-v11.6.0/out/Release/obj.target/deps/v8/gypfiles/libv8_init.a := rm -f /code/node-v11.6.0/out/Release/obj.target/deps/v8/gypfiles/libv8_init.a && ar crsT /code/node-v11.6.0/out/Release/obj.target/deps/v8/gypfiles/libv8_init.a /code/node-v11.6.0/out/Release/obj.target/v8_init/deps/v8/src/setup-isolate-full.o
