@@ -1,6 +1,7 @@
 db.sqlite3
 # ignore design files #
 *.psd
+*.docx
 
 # Miscellaneous files #
 TODO
