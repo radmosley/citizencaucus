@@ -3,12 +3,24 @@
         {% csrf_token %}
         <div class="container">
                 <a href="#" class="home">CITIZEN CAUCUS</a>
-                <form id="search" action="{% url 'search' %}" method="get" accept-charset="utf-8">
-                        <input class="searchTerm" id="searchbox" name="q" type="text" placeholder="search" autocomplete="off"> </br>
-                        <ul class="search-results" id="search-results">
+                        <div class="searchwrapper">
+                                <form id="search" action="{% url 'search' %}" method="get" accept-charset="utf-8">
+                                        <div class="searchbox">
+                                                <div class="button">
+                                                        <i class="fas fa-search"></i>
+                                                </div>
+                                                <div class="placeholder-text">
+                                                        <input class="searchTerm" id="searchbox" name="q" type="text" placeholder="search" autocomplete="off">
+                                                </div>
+                                        </div>
+                                </form>
+                        </div>
+                        {% comment %} <div class="search-results">
+                                <ul class="search-results" id="search-results">
 
-                        </ul>
-                </form>           
+                                                </ul>
+
+                        </div> {% endcomment %}
+                
         </div>  
 </div>
-
