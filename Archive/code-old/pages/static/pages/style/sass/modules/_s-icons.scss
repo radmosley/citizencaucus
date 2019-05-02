@@ -1,0 +1,65 @@
+.bio-pic-outter {
+    border: black;
+}
+
+.bio-pic {
+    display: flex;
+    justify-content: center;
+    
+    a {
+        width:80%;
+        border-radius: 5px;
+        
+        img {  
+                width: 100%;
+            }
+
+            &:hover {
+                opacity: .8s;
+            }
+    }
+    
+}
+
+.icon-name {
+    display:flex;
+    flex-flow: column nowrap;
+    color:black;
+    text-align: center;
+
+    h2 {
+        font-size: 2vh;
+        font-weight: lighter;
+        margin: 0;
+    }
+
+    h3 {
+    font-size: 2.5vh;
+    margin: 0;
+    }
+}
+
+.myBtn {
+    overflow: hidden;
+    padding: 0 1.5vw;
+    
+}
+
+.name {
+    display: flex;
+    flex-flow: column nowrap;
+
+    &:hover {
+        background: #c0c0c0c2;
+        border-radius: 0 0 10px 10px;
+    
+    a {
+        color:black;
+    
+    &:visited {
+        color: black;
+    }
+
+    }
+}
+}
