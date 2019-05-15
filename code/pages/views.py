@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.views import generic
 from django.core import serializers
-from .models import Senator, Vote
+# from .models import Senator, Vote
 from django.http import JsonResponse, HttpResponse
 from django import http
 from django.db.models import Q
