@@ -1,0 +1,13 @@
+db.sqlite3
+# ignore design files #
+*.psd
+
+# Miscellaneous files #
+TODO
+.vscode
+.bash_profile
+/artifacts
+/Archive/
+/code/
+/design/
+.bash_profile
