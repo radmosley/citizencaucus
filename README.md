@@ -9,7 +9,7 @@ Run Docker Image: docker-compose up
 VUE
 
 ##API
-Django
+Django REST Framework
 
 ##Database
 PostGres
