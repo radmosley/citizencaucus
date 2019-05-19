@@ -29,5 +29,6 @@ TODO
 .vscode
 .bash_profile
 /flow/
+/artifacts/secrets/
 
 

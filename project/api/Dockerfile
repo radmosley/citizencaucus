@@ -7,5 +7,7 @@ COPY . .
 RUN pip install --upgrade pip
 RUN pip install pipenv
 RUN pip install -r requirements.txt
+EXPOSE 5432
+EXPOSE 8000
 
 

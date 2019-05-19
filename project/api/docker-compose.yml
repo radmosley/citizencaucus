@@ -6,12 +6,18 @@ services:
     restart: always
     volumes:
       - ./artifacts:/code/artifacts
+    ports:
+      - "5432:5432"
   web:
+    container_name: cc-django-api
     build: .
-    command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/code
+      - ./:/code
+    command: python3 manage.py runserver 0.0.0.0:8000
     ports:
       - "8000:8000"
     depends_on:
       - db
+volumes:
+    code:
+    artifacts:
