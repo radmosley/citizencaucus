@@ -2,12 +2,11 @@ version: '3'
  
 services:
   db:
+    container_name: cc-postgres-db
     image: postgres
     restart: always
     volumes:
-      - ./artifacts:/code/artifacts
-    ports:
-      - "5432:5432"
+      - ./artifacts/*.pgsql:/var/lib/postgresql/data/
   web:
     container_name: cc-django-api
     build: .
@@ -17,6 +16,8 @@ services:
     ports:
       - "8000:8000"
     depends_on:
+      - db
+    links: 
       - db
 volumes:
     code:
