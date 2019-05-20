@@ -10,8 +10,6 @@ services:
   web:
     container_name: cc-django-api
     build: .
-    volumes:
-      - ./:/code
     command: python3 manage.py runserver 0.0.0.0:8000
     ports:
       - "8000:8000"
