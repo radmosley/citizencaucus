@@ -5,15 +5,15 @@ import requests
 import pytz
 
 class Senator(models.Model):
-    first_name = models.CharField(max_length=200)
-    last_name = models.CharField(max_length=200)
+    first_name = models.TextField()
+    last_name = models.TextField()
     short_title = models.CharField(max_length=5)
-    state = models.CharField(max_length=5 )
-    lst_update = models.DateTimeField(default=timezone.now)
-    bio_pic = models.ImageField(null=True)
-    member_id = models.CharField(max_length=20, blank=True)
-    lng_title = models.CharField(max_length=50, blank=True)
-    party = models.CharField(max_length=50, blank=True)
+    # state = models.CharField(max_length=5 )
+    # lst_update = models.DateTimeField(default=timezone.now)
+    # bio_pic = models.ImageField(null=True)
+    # member_id = models.CharField(max_length=20, blank=True)
+    # lng_title = models.CharField(max_length=50, blank=True)
+    # party = models.CharField(max_length=50, blank=True)
     # missed_votes_pct = models.FloatField(blank=True)
     # votes_with_party_pct = models.FloatField(blank=True)
     # contact_url = models.CharField(max_length=200 blank=True null=True)
@@ -59,16 +59,16 @@ class Senator(models.Model):
     #     return '{} {}'.format(self.short_title, self.last_name)
 
 
-class Vote(models.Model):
-    title  = models.TextField()
-    member_id = models.ForeignKey(Senator, on_delete=models.CASCADE, related_name="votes")
-    bill_id = models.CharField(max_length=50)
-    # member_title = models.ManyToManyField()
-    vote = models.CharField(max_length=1000)
-    results = models.CharField(max_length=1000)
+# class Vote(models.Model):
+#     title  = models.TextField()
+#     member_id = models.ForeignKey(Senator, on_delete=models.CASCADE, related_name="votes")
+#     bill_id = models.CharField(max_length=50)
+#     # member_title = models.ManyToManyField()
+#     vote = models.CharField(max_length=1000)
+#     results = models.CharField(max_length=1000)
 
-    def __str__(self):
-        return '{}'.format(self.title)
+#     def __str__(self):
+#         return '{}'.format(self.title)
 
 # class Party(models.Model):
 #     party = models.CharField(max_length=10)

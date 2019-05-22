@@ -6,8 +6,10 @@ db.sqlite3
 TODO
 .vscode
 .bash_profile
-/artifacts
+/project/api/api/artifacts/
 /Archive/
 /code/
 /design/
 .bash_profile
+/project/production
+/project/api/api/endpoints/migrations/

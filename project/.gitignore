@@ -30,5 +30,7 @@ TODO
 .bash_profile
 /flow/
 /artifacts/secrets/
+/api/artifacts/
+/project/api/api/endpoints/migrations/
 
 
