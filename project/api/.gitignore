@@ -1,1 +1,11 @@
 /artifacts/
+TODO
+.vscode
+.bash_profile
+/project/api/api/artifacts/
+/Archive/
+/code/
+/design/
+.bash_profile
+/project/production
+/project/api/api/endpoints/migrations/
