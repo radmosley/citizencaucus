@@ -14,18 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.urls import include, path
-from rest_framework import routers
-from .endpoints.views import SenatorViewSet
-from django.conf.urls.static import static
-from django.conf.urls import url
 from django.contrib import admin
 
-router = routers.DefaultRouter()
-router.register('senators', SenatorViewSet, base_name='senators')
-
-urlpatterns = router.urls
-
-urlpatterns += [
-    url(r'^admin/', admin.site.urls),
-    url(r'^senators/', SenatorViewSet),
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api/', include('endpoints.urls')),
 ]
