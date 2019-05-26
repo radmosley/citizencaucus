@@ -15,3 +15,6 @@ ProPublica
 
 ##Database
 PostGres
+
+##Custom Commands
+python manage.py getSenator

@@ -1,7 +1,10 @@
 from .models import Senator
-from rest_framework import serializers
+from rest_framework.serializers import ModelSerializer
+from rest_framework.renderers import JSONRenderer
+from datetime import datetime
 
-class SenatorSerializer(serializers.HyperlinkedModelSerializer):
+class SenatorSerializer(ModelSerializer):
+
     class Meta:
         model = Senator
         fields = (
@@ -9,7 +12,6 @@ class SenatorSerializer(serializers.HyperlinkedModelSerializer):
             'last_name',
             'short_title',
             'state',
-            'lst_update',
             'member_id',
             'lng_title',
             'party',
@@ -17,6 +19,11 @@ class SenatorSerializer(serializers.HyperlinkedModelSerializer):
             'votes_with_party_pct',
             'contact_url',
             'next_election',
-            'phone_num',
-            'party_votes'
-            )
+            'phone_num'
+        )
+serializer = SenatorSerializer()
+# print(repr(serializer))
+# serializer = SenatorSerializer(Senator)
+# serializer.data
+# json = JSONRenderer().render(serializer.data)
+# json

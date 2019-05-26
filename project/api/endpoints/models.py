@@ -5,13 +5,13 @@ import requests
 import pytz
 
 class Senator(models.Model):
-    first_name = models.TextField()
-    last_name = models.TextField()
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
     short_title = models.CharField(max_length=5)
-    state = models.CharField(max_length=5 )
+    state = models.CharField(max_length=10, blank=True)
     lst_update = models.DateTimeField(default=timezone.now)
     # bio_pic = models.ImageField(null=True)
-    member_id = models.CharField(max_length=20, blank=True)
+    member_id = models.CharField(max_length=20,primary_key=True)
     lng_title = models.CharField(max_length=50, blank=True)
     party = models.CharField(max_length=50, blank=True)
     missed_votes_pct = models.FloatField(blank=True)
