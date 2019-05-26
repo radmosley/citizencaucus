@@ -12,7 +12,7 @@ TODO
 /design/
 .bash_profile
 /project/production
-/project/api/api/endpoints/migrations/
+/project/api/endpoints/migrations/
 /project/frontend/node_modules/
 /project/api/artifacts/
 /project/.DS_Store/
