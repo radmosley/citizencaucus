@@ -1,5 +1,10 @@
 <template>
   <div class="icon">
+  <ul>
+    <li v-for="senator in senators">
+      {{ senator.first_name}} {{ senator.last_name}}
+    </li>
+  </ul>
   </div>
 </template>
 

@@ -1,13 +1,11 @@
 from rest_framework.response import Response
-from rest_framework.views import APIView
 from .models import Senator
 from .serializers import SenatorSerializer
+from rest_framework import viewsets
 
-class SenatorView(APIView):
-    def get(self, request):
-        senators = Senator.objects.all()
-        serializer = SenatorSerializer(senators)
-        return Response(serializer.data)
+class SenatorViewSet(viewsets.ModelViewSet):
+    queryset = Senator.objects.all()
+    serializer_class = SenatorSerializer
     
 
 
