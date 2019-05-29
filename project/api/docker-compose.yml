@@ -3,7 +3,7 @@ version: '3'
 services:
   web:
     container_name: cc-django-api
-    build: .
+    build: /api
     command: python3 manage.py runserver --settings=api.settings 0.0.0.0:8000
     volumes: 
       - ./:/code
@@ -13,6 +13,7 @@ services:
       - db
     links: 
       - db
+
   db:
     container_name: cc-postgres-db
     image: postgres

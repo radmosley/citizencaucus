@@ -1,9 +1,8 @@
+from rest_framework import serializers
 from .models import Senator
-from rest_framework.serializers import ModelSerializer
 from rest_framework.renderers import JSONRenderer
-from datetime import datetime
 
-class SenatorSerializer(ModelSerializer):
+class SenatorSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Senator
@@ -21,7 +20,7 @@ class SenatorSerializer(ModelSerializer):
             'next_election',
             'phone_num'
         )
-serializer = SenatorSerializer()
+# serializer = SenatorSerializer()
 # print(repr(serializer))
 # serializer = SenatorSerializer(Senator)
 # serializer.data
