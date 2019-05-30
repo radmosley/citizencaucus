@@ -1,8 +1,8 @@
 <template>
   <div class="icon">
-  <ul>
+  <ul id="SenatorsList">
     <li v-for="senator in senators">
-      {{ senator.first_name}} {{ senator.last_name}}
+      {{ senator.first_name }} {{ senator.last_name }}
     </li>
   </ul>
   </div>
@@ -17,3 +17,18 @@
   display: inline-block;
 }
 </style>
+
+<script>
+import { mapGetters } from 'vuex'
+
+export default {
+  name: 'SenatorsList',
+  computed: {
+    ...mapGetters([
+      'senators',
+      'isLoading'
+    ])
+  }
+
+}
+</script>

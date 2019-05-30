@@ -18,18 +18,3 @@ const APIService = {
 }    
 
 export default APIService
-
-
-constructor(){
-
-    }
-    /* The othermethods go here*/
-    getSenators(){
-        const url = `${API_URL}/api/senators`;
-        return axios.get(url).then(response => response.data);
-    }
-/*    getSenatorsById(sid){
-        const url = `${API_URL}/api/senators/${sid}`;
-        return axios.get(url).then(response => response.data);
-    }*/
-}
