@@ -11,7 +11,11 @@ TODO
 /code/
 /design/
 .bash_profile
-/project/production
+# /project/production
+/project/production/node_modules
+/project/production/endpoints/migrations/
+*__pycache__
+/project/production/api/artifacts/
 /project/api/endpoints/migrations/
 /project/frontend/node_modules/
 /project/api/artifacts/
