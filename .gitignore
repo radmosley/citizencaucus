@@ -2,3 +2,6 @@ artifacts/
 */__pycache__
 */migrations
 */__init__.py
+.DS_Store
+*.sqlite3
+*TODO
