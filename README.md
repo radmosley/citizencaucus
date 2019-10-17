@@ -41,3 +41,6 @@ update senators data using propublica api.
 ```
 python manage.py getSenator
 ```
+
+## .env-example
+Rename the .env-example file to .env or replace variables with the appropriate values
