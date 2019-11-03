@@ -21,3 +21,14 @@ services:
       - "8000:8000"
     depends_on:
       - postgres
+
+  vue:
+    container_name: vue
+    build:
+      context: .
+      dockerfile: Dockerfile-FE
+    volumes:
+      - '.:/code'
+      - '/code/node_modules'
+    ports:
+      - '8081:8080'
