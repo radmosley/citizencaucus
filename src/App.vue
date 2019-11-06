@@ -2,21 +2,27 @@
 <div id="code">
   <navbar>
   </navbar>
+  <div id="container">
   <Sidebar>
   </Sidebar>
+  <Content>
+  </Content>
+  </div>
 </div>
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue'
 import Sidebar from './components/Sidebar.vue'
+import Content from './components/Content.vue'
 
 
 export default {
   name: 'app',
   components: {
     Navbar,
-    Sidebar
+    Sidebar,
+    Content
   }
 }
 </script>
@@ -33,5 +39,9 @@ export default {
 body {
   margin:0;
   padding:0;
+}
+
+#container {
+  display: flex;
 }
 </style>
