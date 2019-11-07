@@ -20,9 +20,16 @@
     color: white;
 }
 ul {
-    margin: 0 auto;
+    margin: 20px auto;
     list-style: none;
+}
 
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 </style>
