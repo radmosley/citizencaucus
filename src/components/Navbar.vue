@@ -1,6 +1,7 @@
 <template>
 
 <div id=Navbar>
+
     <div id="container">
         <Branding> </Branding>
         <Search></Search>
@@ -17,7 +18,7 @@ export default {
   name: 'app',
   components: {
     Branding,
-    Search
+    Search,
   }
 }
 </script>
@@ -27,6 +28,7 @@ h1 {
         color: white;
         margin: 0;
     }
+
 a {
         text-decoration: none;
     }
@@ -48,7 +50,9 @@ a {
 #branding {
     display: block;
 }
+
 #search {
     display: block;
 }
+
 </style>

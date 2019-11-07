@@ -1,18 +1,22 @@
 <template>
-
-<Navbar>
-
-</Navbar>
-
+<div id="code">
+  <navbar>
+  </navbar>
+  <Sidebar>
+  </Sidebar>
+</div>
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue'
+import Sidebar from './components/Sidebar.vue'
+
 
 export default {
   name: 'app',
   components: {
-    Navbar
+    Navbar,
+    Sidebar
   }
 }
 </script>
