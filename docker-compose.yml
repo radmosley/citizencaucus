@@ -19,6 +19,8 @@ services:
       - "${DJANGO_VOLUME}"
     ports:
       - "8000:8000"
+    environment:
+      - api_key=${PROPUBLICA_API_KEY}
     depends_on:
       - postgres
 
@@ -31,4 +33,4 @@ services:
       - '.:/code'
       - '/code/node_modules'
     ports:
-      - '8081:8080'
+      - '8080:8080'
