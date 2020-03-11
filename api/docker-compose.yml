@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres
+    volumes:
+      - "${DB_VOLUME}"
+    environment: 
+      POSTGRES_USER: "${POSTGRES_USER}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+      POSTGRES_DB: "${POSTGRES_DB}"
+    ports:
+      - "5432:5432"
+
+  django:
+    build: .
+    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - "${DJANGO_VOLUME}"
+    ports:
+      - "8000:8000"
+    environment:
+      - api_key=${PROPUBLICA_API_KEY}
+    depends_on:
+      - postgres
+
+  vue:
+    container_name: vue
+    build:
+      context: .
+      dockerfile: Dockerfile-FE
+    volumes:
+      - '.:/code'
+      - '/code/node_modules'
+    ports:
+      - '8080:8080'
