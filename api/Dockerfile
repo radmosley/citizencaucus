@@ -1,4 +1,4 @@
-FROM gcr.io/github.com/radmosley/citizencaucus
+FROM gcr.io/radmosley/citizencaucus
 
 ADD requirements.txt /app/requirements.txt
 RUN /env/bin/pip install --upgrade pip && /env/bin/pip install -r /app/requirements.txt
