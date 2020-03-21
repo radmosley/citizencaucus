@@ -1,8 +1,7 @@
-FROM python:3
-ENV PYTHONUNBUFFERED 1
-RUN mkdir /code
-WORKDIR /code
-COPY . /code/
-COPY requirements.txt /code/
-RUN pip install -r requirements.txt
-RUN python manage.py migrate
+FROM gcr.io/github.com/radmosley/citizencaucus
+
+ADD requirements.txt /app/requirements.txt
+RUN /env/bin/pip install --upgrade pip && /env/bin/pip install -r /app/requirements.txt
+ADD . /app
+
+CMD gunicorn -b :$PORT mysite.wsgi
