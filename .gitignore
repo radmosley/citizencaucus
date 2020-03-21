@@ -3,5 +3,5 @@ api/artifacts
 api/.env
 *-private.*
 /**/**/__pycache__
-api/**/__init__.py
-api/**/migrations
+/**/**/__init__.py
+**/**/migrations
