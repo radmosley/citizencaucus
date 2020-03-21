@@ -1,0 +1,20 @@
+name:
+services:
+  cc-backend:
+    type: python
+    # build:
+    #   - pip install -r requirements.txt
+    command: python manage.py makemigrations && manage,py migrate
+
+  cc-postgres:
+    type: postgres:latest
+    portforward: false
+    creds:
+      datbase: cc-postgres
+      user: postgres
+      password: postgres
+
+tooling:
+  django-admin:
+    services: cc-backend
+    cmd: django-admin
