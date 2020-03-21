@@ -1,0 +1,7 @@
+cloud_sql_proxy
+api/artifacts
+api/.env
+*-private.*
+/**/**/__pycache__
+/**/**/__init__.py
+**/**/migrations

@@ -1,14 +1,16 @@
 version: '3'
 
 services:
-  postgres:
+  cc-postgres:
     image: postgres
     volumes:
       - "${DB_VOLUME}"
     environment: 
-      POSTGRES_USER: "${POSTGRES_USER}"
-      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
-      POSTGRES_DB: "${POSTGRES_DB}"
+      LOCAL_DB_USER: "postgres"
+      LOCAL_DB_PASSWORD: "postgres"
+      # LOCAL_DB_USER: "${DB_USER}"
+      # LOCAL_DB_PASSWORD: "${DB_PASSWORD}"
+      POSTGRES_DB: "cc-postgres"
     ports:
       - "5432:5432"
 
@@ -19,18 +21,18 @@ services:
       - "${DJANGO_VOLUME}"
     ports:
       - "8000:8000"
-    environment:
-      - api_key=${PROPUBLICA_API_KEY}
+    # environment:
+    #   - api_key=${PROPUBLICA_API_KEY}
     depends_on:
-      - postgres
+      - cc-postgres
 
-  vue:
-    container_name: vue
-    build:
-      context: .
-      dockerfile: Dockerfile-FE
-    volumes:
-      - '.:/code'
-      - '/code/node_modules'
-    ports:
-      - '8080:8080'
+  # vue:
+  #   container_name: vue
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile-FE
+  #   volumes:
+  #     - '.:/code'
+  #     - '/code/node_modules'
+  #   ports:
+  #     - '8080:8080'
